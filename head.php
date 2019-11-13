@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title><?php echo (isset($page_title)? $page_title : 'Lumise Shop');?> - Lumise</title>
+        <title><?php echo (isset($page_title)? $page_title : 'AriWara');?> - Personaliza tu Producto</title>
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i" rel="stylesheet">
         <link rel="stylesheet" href="<?php echo theme('assets/css/bootstrap.min.css', true); ?>?version=<?php echo LUMISE; ?>">
         <link rel="stylesheet" href="<?php echo theme('assets/css/font-awesome.min.css', true); ?>?version=<?php echo LUMISE; ?>">
@@ -18,3 +18,4 @@
         <script src="<?php echo theme('assets/js/main.js', true); ?>?version=<?php echo LUMISE; ?>"></script>
     </head>
     <body>
+
