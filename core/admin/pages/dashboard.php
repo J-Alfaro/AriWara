@@ -182,9 +182,9 @@
 		</div>
 	</div>
 	<ul class="lumise_list_icon">
-		<li><span>Send Message</span><a href="https://www.facebook.com/lumisecom" target="blank" class="fa fa-facebook"></a></li>
-		<li><span>Videos Tutorial</span><a href="https://www.youtube.com/channel/UCi-xBFGhdx7W0OuAzJNEy5Q" target="blank" class="fa fa-youtube-play"></a></li>
-		<li><span>Custom Request</span><a href="https://www.lumise.com/services" target="blank" class="fa fa-pencil-square-o"></a></li>
-		<li><span>Help Center</span><a href="https://www.lumise.com/help-center" target="blank" class="fa fa-life-ring"></a></li>
+		<li><span>Enviar Mensaje</span><a href="https://www.facebook.com" target="blank" class="fa fa-facebook"></a></li>
+		<li><span>Video Tutorial</span><a href="https://www.youtube.com" target="blank" class="fa fa-youtube-play"></a></li>
+		<li><span>Solicitud personalizada</span><a href="https://www.ariwara.com" target="blank" class="fa fa-pencil-square-o"></a></li>
+		<li><span>Ayuda</span><a href="https://www.ariwara.com" target="blank" class="fa fa-life-ring"></a></li>
 	</ul>
 </div>
