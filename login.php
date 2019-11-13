@@ -17,7 +17,7 @@ $redirect = isset($_POST['redirect']) && !empty($_POST['redirect']) ? $_POST['re
 	<head>
 		<meta charset="utf-8" />
 		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" name="viewport" />
-		<title><?php echo $lumise->lang('Control Panel Login'); ?></title>
+		<title><?php echo $lumise->lang('Login'); ?></title>
 		<link rel="stylesheet" href="<?php echo theme('assets/css/login.css', true); ?>">
 		<script type="text/javascript" src="<?php echo theme('assets/js/jquery.min.js', true); ?>"></script>
 		<?php $lumise->do_action('editor-header'); ?>
@@ -27,7 +27,7 @@ $redirect = isset($_POST['redirect']) && !empty($_POST['redirect']) ? $_POST['re
 	<?php if (isset($_GET['reset-password']) && !empty($_GET['reset-password'])) { ?>
 		<div id="login-form" class="reset-password-form">
 			<a id="logo" href="<?php echo $lumise->cfg->settings['logo_link']; ?>">
-				<img src="<?php echo theme('assets/images/logo_login.png', true); ?>" />
+				<img src="<?php echo theme('assets/images/logo_ariwara.png', true); ?>" />
 			</a>
 			<h1>
 				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="18px" height="18px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" fill="#9e9e9e"><g><path d="M394.667,214.421v-75.755C394.667,62.208,332.459,0,256,0S117.333,62.208,117.333,138.667v75.755    c-24.32,4.949-42.667,26.496-42.667,52.245v192C74.667,488.064,98.581,512,128,512h256c29.419,0,53.333-23.936,53.333-53.333v-192    C437.333,240.917,418.987,219.371,394.667,214.421z M279.659,378.24l8.235,57.579c0.448,3.072-0.469,6.165-2.496,8.491    c-2.027,2.325-4.971,3.691-8.064,3.691h-42.667c-3.093,0-6.037-1.344-8.064-3.669s-2.944-5.44-2.496-8.491l8.235-57.579    c-17.835-8.917-29.675-27.328-29.675-47.595c0-29.397,23.915-53.333,53.333-53.333s53.333,23.936,53.333,53.333    C309.333,350.933,297.493,369.344,279.659,378.24z M330.667,213.333H181.333v-74.667C181.333,97.493,214.827,64,256,64    s74.667,33.493,74.667,74.667V213.333z"></path></g></svg>
