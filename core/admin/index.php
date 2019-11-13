@@ -195,7 +195,7 @@ class lumise_router {
 				),
 				'capability' => 'lumise_read_shapes'
 			),
-			'printings' => array(
+			/*'printings' => array(
 				'title' => $lumise->lang('Printing Type'),
 				'icon'  => '<i class="fa fa-print"></i>',
 				'child' => array(
@@ -213,7 +213,8 @@ class lumise_router {
 					),
 				),
 				'capability' => 'lumise_read_printings'
-			),
+			),*/
+			/*
 			'fonts' => array(
 				'title' => $lumise->lang('Fonts'),
 				'icon'  => '<i class="fa fa-font"></i>',
@@ -232,7 +233,8 @@ class lumise_router {
 					),
 				),
 				'capability' => 'lumise_read_fonts'
-			),
+			),*/
+			/*
 			'languages' => array(
 				'title' => $lumise->lang('Languages'),
 				'icon'  => '<i class="fa fa-language"></i>',
@@ -251,7 +253,7 @@ class lumise_router {
 					),
 				),
 				'capability' => 'lumise_read_languages'
-			),
+			),*/
 			'orders' => array(
 				'title' => $lumise->lang('Orders'),
 				'icon'  => '<i class="fa fa-shopping-bag"></i>',
@@ -272,6 +274,7 @@ class lumise_router {
 				),
 				'capability' => 'lumise_read_orders'
 			),
+			/*
 			'shares' => array(
 				'title' => $lumise->lang('Shares'),
 				'icon'  => '<i class="fa fa-share-alt"></i>',
@@ -296,7 +299,8 @@ class lumise_router {
 					),
 				),
 				'capability' => 'lumise_read_bugs'
-			),
+			),*/
+			/*
 			'addons' => array(
 				'title' => $lumise->lang('Addons'),
 				'icon'  => '<i class="fa fa-plug"></i>',
@@ -321,12 +325,14 @@ class lumise_router {
 				),
 				'capability' => 'lumise_read_addons',
 			),
+			*/
+			/*
 			'settings' => array(
 				'title' => $lumise->lang('Settings'),
 				'icon'  => '<i class="fa fa-cog"></i>',
 				'link'   => $this->getURI().'lumise-page=settings',
 				'capability' => 'lumise_read_settings'
-			),
+			),*/
 		));
 		
 		$this->_load_assets = $load_assets;
