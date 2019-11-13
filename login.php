@@ -189,5 +189,6 @@ $redirect = isset($_POST['redirect']) && !empty($_POST['redirect']) ? $_POST['re
 		});
 	</script>
 	<?php } ?>
+	<!--Hola mundo-->
 </body>
 </html>
