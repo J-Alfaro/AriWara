@@ -88,7 +88,7 @@
 				if (isset($_GET['id'])) {
 					echo '<h2>'.$lumise->lang('Edit Design').'</h2><a href="'.$lumise_router->getURI().'lumise-page=design" class="add_new">'.$lumise->lang('Add New Design').'</a>';
 				} else {
-					echo '<h2>'.$lumise->lang('Add Design').'</h2>';
+					echo '<h2>'.$lumise->lang('Añadir diseño').'</h2>';
 				}
 				$lumise_page = isset($_GET['lumise-page']) ? $_GET['lumise-page'] : '';
 				echo $lumise_helper->breadcrumb($lumise_page); 
