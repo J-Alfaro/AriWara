@@ -147,7 +147,7 @@ if ($lumise->connector->platform == 'php') {
 			echo $html;
 
 		?>
-		<ver><span><a href="https://www.lumise.com/?utm_source=codecanyon&utm_medium=version-link&utm_campaign=client-site&utm_term=backend-link&utm_content=woocommerce" target=_blank>Lumise Version</span> <?php echo LUMISE; ?></a></ver>
+		<ver><span><a href="#">Ariwara version 1.0</span></a></ver>
 	</div>
 
 	<div class="lumise_sidebar lumise_mobile">

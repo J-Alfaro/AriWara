@@ -326,13 +326,13 @@ class lumise_router {
 				'capability' => 'lumise_read_addons',
 			),
 			*/
-			
+			/*
 			'settings' => array(
 				'title' => $lumise->lang('Settings'),
 				'icon'  => '<i class="fa fa-cog"></i>',
 				'link'   => $this->getURI().'lumise-page=settings',
 				'capability' => 'lumise_read_settings'
-			),
+			),*/
 		));
 		
 		$this->_load_assets = $load_assets;
