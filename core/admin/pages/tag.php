@@ -7,7 +7,7 @@
 		array(
 			'type' => 'input',
 			'name' => 'name',
-			'label' => $lumise->lang('Name'),
+			'label' => $lumise->lang('Nombre'),
 			'required' => true
 		),
 		array(
@@ -24,8 +24,8 @@
 	<div class="lumise_content">
 		<?php
 			$lumise->views->detail_header(array(
-				'add' => $lumise->lang('Add New Tag'),
-				'edit' => $lumise->lang('Edit Tag'),
+				'add' => $lumise->lang('Añadir nueva etiqueta'),
+				'edit' => $lumise->lang('Editar etiqueta'),
 				'page' => $section,
 				'type' => $type
 			));

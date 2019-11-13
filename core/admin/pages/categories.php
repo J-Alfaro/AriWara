@@ -1,6 +1,6 @@
 <?php
 
-	$title = "Categories list";
+	$title = "Lista de categorias";
 	$prefix = 'categories_';
 	
 	// Search Form
@@ -168,10 +168,10 @@
 	<div class="lumise_content">
 
 		<div class="lumise_header">
-			<h2><?php echo $lumise->lang('Categories'); ?></h2>
+			<h2><?php echo $lumise->lang('Categorias'); ?></h2>
 			<a href="<?php echo $lumise_router->getURI();?>lumise-page=category&type=<?php echo $type; ?>" class="add_new">
 				<i class="fa fa-plus"></i> 
-				<?php echo $lumise->lang('Add new category'); ?>
+				<?php echo $lumise->lang('Añadir nueva categoria'); ?>
 			</a>
 			<?php
 				$lumise_page = isset($_GET['lumise-page']) ? $_GET['lumise-page'] : '';
@@ -183,14 +183,14 @@
 			<div class="left">
 				<form action="<?php echo $lumise_router->getURI();?>lumise-page=categories&type=<?php echo $type ?>" method="post">
 					<select name="action" class="art_per_page">
-						<option value="none"><?php echo $lumise->lang('Bulk Actions'); ?></option>
-						<option value="active"><?php echo $lumise->lang('Active'); ?></option>
-						<option value="deactive"><?php echo $lumise->lang('Deactive'); ?></option>
-						<option value="delete"><?php echo $lumise->lang('Delete'); ?></option>
+						<option value="none"><?php echo $lumise->lang('Acciones masivas'); ?></option>
+						<option value="active"><?php echo $lumise->lang('Activo'); ?></option>
+						<option value="deactive"><?php echo $lumise->lang('Inactivo'); ?></option>
+						<option value="delete"><?php echo $lumise->lang('Borrado'); ?></option>
 					</select>
 					<input type="hidden" name="id_action" class="id_action">
 					<input type="hidden" name="do" value="action" />
-					<input type="submit" class="lumise_submit" name="action_submit" value="<?php echo $lumise->lang('Apply'); ?>" />
+					<input type="submit" class="lumise_submit" name="action_submit" value="<?php echo $lumise->lang('Aplicar'); ?>" />
 					<?php $lumise->securityFrom();?>
 				</form>
 				<form class="less" action="<?php echo $lumise_router->getURI();?>lumise-page=categories&type=<?php echo $type ?>" method="post">
@@ -223,8 +223,8 @@
 			</div>
 			<div class="right">
 				<form action="<?php echo $lumise_router->getURI();?>lumise-page=categories&type=<?php echo $type ?>" method="post">
-					<input class="search" type="search" name="search" class="form-control form_search" placeholder="Search ..." value="<?php if(isset($_SESSION[$prefix.$type.'data_search'])) echo $_SESSION[$prefix.$type.'data_search']; ?>">
-					<input class="lumise_submit" type="submit" name="search_cate" value="<?php echo $lumise->lang('Search'); ?>">
+					<input class="search" type="search" name="search" class="form-control form_search" placeholder="Buscar ..." value="<?php if(isset($_SESSION[$prefix.$type.'data_search'])) echo $_SESSION[$prefix.$type.'data_search']; ?>">
+					<input class="lumise_submit" type="submit" name="search_cate" value="<?php echo $lumise->lang('Buscar'); ?>">
 					<?php $lumise->securityFrom();?>
 				</form>
 			</div>
@@ -240,10 +240,10 @@
 									<label for="check_all"><em class="check"></em></label>
 								</div>
 							</th>
-							<th width="40%"><?php echo $lumise->lang('Name'); ?></th>
-							<th><?php echo $lumise->lang('Thumbnail'); ?></th>
-							<th><?php echo $lumise->lang('Status'); ?></th>
-							<th><?php echo $lumise->lang('Ordering'); ?></th>
+							<th width="40%"><?php echo $lumise->lang('Nombre'); ?></th>
+							<th><?php echo $lumise->lang('Miniatura'); ?></th>
+							<th><?php echo $lumise->lang('Estado'); ?></th>
+							<th><?php echo $lumise->lang('Cantidad'); ?></th>
 						</tr>
 					</thead>
 					<tbody>

@@ -1,5 +1,5 @@
 <?php
-	$title = "Tags list";
+	$title = "Lista de etiquetas";
 	$prefix = 'tags_';
 
 	// Action Form
@@ -54,7 +54,7 @@
 		$data_search = isset($_POST['search']) ? trim($_POST['search']) : '';
 
 		if (empty($data_search)) {
-			$errors = 'Please Insert Key Word';
+			$errors = 'Por favor inserte una palbara clave';
 			$_SESSION[$prefix.$type.'data_search'] = '';
 		} else {
 			$_SESSION[$prefix.$type.'data_search'] = $data_search;
@@ -140,8 +140,8 @@
 <div class="lumise_wrapper">
 	<div class="lumise_content">
 		<div class="lumise_header">
-			<h2><?php echo $lumise->lang('Tags'); ?></h2>
-			<a href="<?php echo $lumise_router->getURI();?>lumise-page=tag&type=<?php echo $type; ?>" class="add_new"><?php echo $lumise->lang('Add New Tag'); ?></a>
+			<h2><?php echo $lumise->lang('Etiquetas'); ?></h2>
+			<a href="<?php echo $lumise_router->getURI();?>lumise-page=tag&type=<?php echo $type; ?>" class="add_new"><?php echo $lumise->lang('Añadir nueva etiqueta'); ?></a>
 			<?php
 				$lumise_page = isset($_GET['lumise-page']) ? $_GET['lumise-page'] : '';
 				$type = isset($_GET['type']) ? $_GET['type'] : '';
@@ -156,7 +156,7 @@
 				<form action="<?php echo $lumise_router->getURI();?>lumise-page=tags&type=<?php echo $type; ?>" method="post">
 					<input type="hidden" name="id_action" class="id_action">
 					<input type="hidden" name="action" value="delete" />
-					<input  class="lumise_submit" type="submit" name="action_submit" value="<?php echo $lumise->lang('Delete'); ?>">
+					<input  class="lumise_submit" type="submit" name="action_submit" value="<?php echo $lumise->lang('Eliminar'); ?>">
 					<?php $lumise->securityFrom();?>
 				</form>
 				<form action="<?php echo $lumise_router->getURI();?>lumise-page=tags&type=<?php echo $type; ?>" method="post">
@@ -189,8 +189,8 @@
 			</div>
 			<div class="right">
 				<form action="<?php echo $lumise_router->getURI();?>lumise-page=tags&type=<?php echo $type; ?>" method="post">
-					<input class="search" type="search" name="search" class="form-control form_search" placeholder="Search ..." value="<?php if(isset($_SESSION[$prefix.$type.'data_search'])) echo $_SESSION[$prefix.$type.'data_search']; ?>">
-					<input class="lumise_submit" type="submit" name="search_tag" value="<?php echo $lumise->lang('Search'); ?>">
+					<input class="search" type="search" name="search" class="form-control form_search" placeholder="Buscar ..." value="<?php if(isset($_SESSION[$prefix.$type.'data_search'])) echo $_SESSION[$prefix.$type.'data_search']; ?>">
+					<input class="lumise_submit" type="submit" name="search_tag" value="<?php echo $lumise->lang('Buscar'); ?>">
 					<?php $lumise->securityFrom();?>
 				</form>
 			</div>
@@ -235,7 +235,7 @@
 						echo '<a href="'.$lumise_router->getURI().'lumise-page=tags&type='.$type.'" class="btn-back"><i class="fa fa-reply" aria-hidden="true"></i>'.$lumise->lang('Back To Lists').'</a>';
 					}
 					else
-						echo '<p class="no-data">'.$lumise->lang('No data. Please add tag.').'</p>';
+						echo '<p class="no-data">'.$lumise->lang('No hay datos, por favor añade una etiqueta').'</p>';
 			}?>
 	</div>
 </div>
