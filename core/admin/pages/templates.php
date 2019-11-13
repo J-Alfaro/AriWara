@@ -77,7 +77,7 @@
 		$data_search = isset($_POST['search']) ? trim($_POST['search']) : '';
 
 		if (empty($data_search)) {
-			$errors = 'Please Insert Key Word';
+			$errors = 'Por favor ingrese un palabra clave';
 			$_SESSION[$prefix.'data_search'] = '';
 		} else {
 			$_SESSION[$prefix.'data_search'] = 	$data_search;

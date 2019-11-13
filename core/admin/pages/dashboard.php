@@ -13,7 +13,7 @@
 				<i class="fa fa-heart-o" style="background: #1e88e5"></i>
 				<div class="box_right">
 					<span><?php echo $data['cliparts'];?></span>
-					<p><?php echo $lumise->lang('Cliparts'); ?></p>
+					<p><?php echo $lumise->lang('Imagenes'); ?></p>
 				</div>
 			</div>
 		</div>
@@ -22,7 +22,7 @@
 				<i class="fa fa-server" style="background: #81C784"></i>
 				<div class="box_right">
 					<span><?php echo $data['templates'];?></span>
-					<p><?php echo $lumise->lang('Templates'); ?></p>
+					<p><?php echo $lumise->lang('Plantillas'); ?></p>
 				</div>
 			</div>
 		</div>
@@ -31,7 +31,7 @@
 				<i class="fa fa-shopping-basket" style="background: #7460ee"></i>
 				<div class="box_right">
 					<span><?php echo $orders['total_count'];?></span>
-					<p><?php echo $lumise->lang('Orders'); ?></p>
+					<p><?php echo $lumise->lang('Ordenes'); ?></p>
 				</div>
 			</div>
 		</div>
@@ -40,7 +40,7 @@
 				<i class="fa fa-square" style="background: #fc4b6c"></i>
 				<div class="box_right">
 					<span><?php echo $data['shapes'];?></span>
-					<p><?php echo $lumise->lang('Shapes'); ?></p>
+					<p><?php echo $lumise->lang('Formas'); ?></p>
 				</div>
 			</div>
 		</div>
@@ -48,16 +48,16 @@
 	<div class="lumise_container">
 		<div class="lumise-col lumise-col-6">
 			<div class="lusime_box_dashbroad">
-				<h3><?php echo $lumise->lang('Recent Orders'); ?></h3>
+				<h3><?php echo $lumise->lang('Ordenes mas recientes'); ?></h3>
 				<div class="box_content">
 					<table class="lumise_table">
 						<thead>
 							<tr>
-								<th><?php echo $lumise->lang('Orders ID'); ?></th>
+								<th><?php echo $lumise->lang('ID'); ?></th>
 								<th><?php echo $lumise->lang('Total'); ?></th>
-								<th><?php echo $lumise->lang('Status'); ?></th>
-								<th><?php echo $lumise->lang('Date'); ?></th>
-								<th><?php echo $lumise->lang('View'); ?></th>
+								<th><?php echo $lumise->lang('Estado'); ?></th>
+								<th><?php echo $lumise->lang('Fecha'); ?></th>
+								<th><?php echo $lumise->lang('Ver'); ?></th>
 							</tr>
 						</thead>
 						<tbody>
@@ -77,7 +77,7 @@
 							}else{
 								?>
 								<tr>
-									<td colspan="5"><?php echo $lumise->lang('Apologies, but no results were found.');?></td>
+									<td colspan="5"><?php echo $lumise->lang('Disculpa, pero no se encontraron resultados.');?></td>
 								</tr>
 								<?php
 							}
@@ -90,9 +90,9 @@
 		</div>
 		<div class="lumise-col lumise-col-6">
 			<div class="lusime_box_dashbroad lumise_blog">
-				<h3><?php echo $lumise->lang('News Blog'); ?></h3>
+				<h3><?php echo $lumise->lang('Nuevo blog'); ?></h3>
 				<div class="box_content" id="lumise-rss-display">
-					<p><i><?php echo $lumise->lang('Loading latest blog'); ?>..</i></p>
+					<p><i><?php echo $lumise->lang('Cargando el ultimo blog'); ?>..</i></p>
 				</div>
 			</div>
 		</div>
@@ -100,7 +100,7 @@
 	<div class="lumise_container">
 		<div class="lumise-col lumise-col-6">
 			<div class="lusime_box_dashbroad list_thumb">
-				<h3><?php echo $lumise->lang('Newest cliparts'); ?></h3>
+				<h3><?php echo $lumise->lang('Nuevas imagenes'); ?></h3>
 				<div class="box_content">
 					<?php
 					
@@ -127,7 +127,7 @@
 						echo '</ul>';
 					}else{
 						?>
-						<p><?php echo $lumise->lang('Apologies, but no results were found.');?></p>
+						<p><?php echo $lumise->lang('Disculpa, pero no se encontraron resultados.');?></p>
 						<?php
 					}
 					?>
@@ -136,7 +136,7 @@
 		</div>
 		<div class="lumise-col lumise-col-6">
 			<div class="lusime_box_dashbroad list_thumb">
-				<h3><?php echo $lumise->lang('Newest design templates'); ?></h3>
+				<h3><?php echo $lumise->lang('Nuevo diseño de plantillas'); ?></h3>
 				<div class="box_content">
 					<ul>
 					<?php
@@ -163,7 +163,7 @@
 						echo '</ul>';
 					}else{
 						?>
-						<p><?php echo $lumise->lang('Apologies, but no results were found.');?></p>
+						<p><?php echo $lumise->lang('Disculpa, pero no se encontraron resultados.');?></p>
 						<?php
 					}
 					?>
