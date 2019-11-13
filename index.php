@@ -24,8 +24,7 @@ $data = $lumise->lib->get_rows('products', $search_filter, $orderby, $ordering, 
 include(theme('header.php'));
 
 ?>
-        <div class="lumise-hero">
-            <h1>hola prueba</h1>
+        <div class="lumise-hero">            
             <div class="owl-carousel owl-theme">
                 <div class="item" style="background:url('<?php echo theme('assets/images/hero2.jpg', true); ?>') no-repeat;background-size:cover;">
                     <div class="container">
