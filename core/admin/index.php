@@ -44,7 +44,7 @@ class lumise_router {
 						'title' => $lumise->lang('Inicio'),
 						'link'   => $this->getURI().'lumise-page=dashboard',
 					),
-					'updates' => array(
+					/*'updates' => array(
 						'title' => $lumise->lang('Actualizaciones').(!empty($this->check_update) && isset($this->check_update->version) && version_compare(LUMISE, $this->check_update->version, '<') ? ' <span class="update-notice">1</span>' : ''),
 						'link'   => $this->getURI().'lumise-page=updates',
 					),
@@ -55,7 +55,7 @@ class lumise_router {
 					'system' => array(
 						'title' => $lumise->lang('Estado'),
 						'link'   => $this->getURI().'lumise-page=system',
-					)
+					)*/
 				),
 				'capability' => 'lumise_read_dashboard'
 			),
