@@ -127,7 +127,7 @@ $redirect = isset($_POST['redirect']) && !empty($_POST['redirect']) ? $_POST['re
 				</a>
 			<?php }else{ ?>
 				<p>
-					<strong><?php echo $lumise->lang('Please setup the admin\'s email and password'); ?></strong>
+					<strong><?php echo $lumise->lang('Configure el correo electrónico y la contraseña del administrador'); ?></strong>
 				</p>
 				<div class="inputContainer">
 					<input name="email" type="text" placeholder="<?php echo $lumise->lang('Email'); ?>" value="<?php echo $email; ?>" />
