@@ -13,7 +13,7 @@ if ($lumise->connector->platform == 'php') {
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title><?php echo (isset($title) ? $title : 'Lumise Control Panel'); ?></title><?php
+		<title><?php echo (isset($title) ? $title : 'AriWara - Panel de control'); ?></title><?php
 }
 
 ?>
