@@ -159,10 +159,10 @@
 	<div class="lumise_content">
 
 		<div class="lumise_header">
-			<h2><?php echo $lumise->lang('Products Base'); ?></h2>
+			<h2><?php echo $lumise->lang('Lista de productos'); ?></h2>
 			<a href="<?php echo $lumise_router->getURI(); ?>lumise-page=product" class="add_new">
 				<i class="fa fa-plus"></i> 
-				<?php echo $lumise->lang('Add New Product Base'); ?>
+				<?php echo $lumise->lang('Agregar nuevo Producto'); ?>
 			</a>
 			<?php
 				$lumise_page = isset($_GET['lumise-page']) ? $_GET['lumise-page'] : '';
@@ -176,18 +176,18 @@
 			<div class="left">
 				<form action="<?php echo $lumise_router->getURI();?>lumise-page=products" method="post">
 					<select name="action" class="art_per_page">
-						<option value="none"><?php echo $lumise->lang('Bulk Actions'); ?></option>
-						<option value="active"><?php echo $lumise->lang('Active'); ?></option>
-						<option value="deactive"><?php echo $lumise->lang('Deactive'); ?></option>
-						<option value="delete"><?php echo $lumise->lang('Delete'); ?></option>
+						<option value="none"><?php echo $lumise->lang('Acciones'); ?></option>
+						<option value="active"><?php echo $lumise->lang('Activo'); ?></option>
+						<option value="deactive"><?php echo $lumise->lang('Inactivo'); ?></option>
+						<option value="delete"><?php echo $lumise->lang('Eliminar'); ?></option>
 					</select>
 					<input type="hidden" name="id_action" class="id_action">
-					<input  class="lumise_submit" type="submit" name="action_submit" value="<?php echo $lumise->lang('Apply'); ?>">
+					<input  class="lumise_submit" type="submit" name="action_submit" value="<?php echo $lumise->lang('Aplicar'); ?>">
 					<?php $lumise->securityFrom();?>
 				</form>
 				<form class="less" action="<?php echo $lumise_router->getURI();?>lumise-page=products" method="post">
 					<select name="per_page" class="art_per_page" data-action="submit">
-						<option value="none">-- <?php echo $lumise->lang('Per page'); ?> --</option>
+						<option value="none">-- <?php echo $lumise->lang('Por pagina'); ?> --</option>
 						<?php
 							$per_pages = array('5', '10', '15', '20', '100');
 
@@ -206,21 +206,21 @@
 				</form>
 				<form class="less" action="<?php echo $lumise_router->getURI();?>lumise-page=products" method="post">
 					<select name="sort" class="art_per_page" data-action="submit">
-						<option value="">-- <?php echo $lumise->lang('Sort by'); ?> --</option>
-						<option value="order_asc" <?php if ($dt_order == 'order_asc' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Order ASC'); ?></option>
-						<option value="order_desc" <?php if ($dt_order == 'order_desc' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Order DESC'); ?></option>
+						<option value="">-- <?php echo $lumise->lang('Ordenar por'); ?> --</option>
+						<option value="order_asc" <?php if ($dt_order == 'order_asc' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Orden ASC'); ?></option>
+						<option value="order_desc" <?php if ($dt_order == 'order_desc' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Orden DESC'); ?></option>
 						<option value="id_asc" <?php if ($dt_order == 'id_asc' ) echo 'selected' ; ?> ><?php echo $lumise->lang('ID ASC'); ?></option>
 						<option value="id_desc" <?php if ($dt_order == 'id_desc' ) echo 'selected' ; ?> ><?php echo $lumise->lang('ID DESC'); ?></option>
-						<option value="name_asc" <?php if ($dt_order == 'name_asc' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Name'); ?> A-Z</option>
-						<option value="name_desc" <?php if ($dt_order == 'name_desc' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Name'); ?> Z-A</option>
+						<option value="name_asc" <?php if ($dt_order == 'name_asc' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Nombre'); ?> A-Z</option>
+						<option value="name_desc" <?php if ($dt_order == 'name_desc' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Nombre'); ?> Z-A</option>
 					</select>
 					<?php $lumise->securityFrom();?>
 				</form>
 			</div>
 			<div class="right">
 				<form action="<?php echo $lumise_router->getURI();?>lumise-page=products" method="post">
-					<input type="search" name="search" class="search" placeholder="<?php echo $lumise->lang('Search ...'); ?>" value="<?php if(isset($_SESSION[$prefix.'data_search'])) echo $_SESSION[$prefix.'data_search']; ?>">
-					<input  class="lumise_submit" type="submit" name="search_product" value="<?php echo $lumise->lang('Search'); ?>">
+					<input type="search" name="search" class="search" placeholder="<?php echo $lumise->lang('Buscar ...'); ?>" value="<?php if(isset($_SESSION[$prefix.'data_search'])) echo $_SESSION[$prefix.'data_search']; ?>">
+					<input  class="lumise_submit" type="submit" name="search_product" value="<?php echo $lumise->lang('Buscar'); ?>">
 					<?php $lumise->securityFrom();?>
 
 				</form>
@@ -237,10 +237,10 @@
 									<label for="check_all"><em class="check"></em></label>
 								</div>
 							</th>
-							<th><?php echo $lumise->lang('Name'); ?></th>
-							<th><?php echo $lumise->lang('Description'); ?></th>
-							<th><?php echo $lumise->lang('Stages'); ?></th>
-							<th><?php echo $lumise->lang('Status'); ?></th>
+							<th><?php echo $lumise->lang('Nombre'); ?></th>
+							<th><?php echo $lumise->lang('Descripcion'); ?></th>
+							<th><?php echo $lumise->lang('Etapa'); ?></th>
+							<th><?php echo $lumise->lang('Estado'); ?></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -259,7 +259,7 @@
 										</td>
 										<td>
 											<a href="<?php echo $lumise_router->getURI();?>lumise-page=product&id=<?php if(isset($value['id'])) echo $value['id'] ?>" class="name"><?php echo isset($value['name']) ? $value['name'] : ''; ?></a>
-											<a href="#" class="lumise_action_duplicate" data-id="<?php if(isset($value['id'])) echo $value['id'] ?>" data-table="<?php echo $table_name; ?>"><?php echo $lumise->lang('Duplicate'); ?></a>
+											<a href="#" class="lumise_action_duplicate" data-id="<?php if(isset($value['id'])) echo $value['id'] ?>" data-table="<?php echo $table_name; ?>"><?php echo $lumise->lang('Duplicar'); ?></a>
 										</td>
 										<td><?php echo isset($value['description']) ? substr($value['description'], 0, 50) : ''; ?></td>
 										<td><?php
@@ -334,9 +334,9 @@
 												<?php
 													if (isset($value['active'])) {
 														if ($value['active'] == 1) {
-															echo '<em class="pub">'.$lumise->lang('active').'</em>';
+															echo '<em class="pub">'.$lumise->lang('Activo').'</em>';
 														} else {
-															echo '<em class="un pub">'.$lumise->lang('deactive').'</em>';
+															echo '<em class="un pub">'.$lumise->lang('Inactivo').'</em>';
 														}
 													}
 												?>
@@ -356,12 +356,12 @@
 
 		<?php } else {
 					if (isset($total_record) && $total_record > 0) {
-						echo '<p class="no-data">'.$lumise->lang('Apologies, but no results were found.').'</p>';
+						echo '<p class="no-data">'.$lumise->lang('Disculpas, pero no se encontraron resultados').'</p>';
 						$_SESSION[$prefix.'data_search'] = '';
-						echo '<a href="'.$lumise_router->getURI().'lumise-page=products" class="btn-back"><i class="fa fa-reply" aria-hidden="true"></i>'.$lumise->lang('Back To Lists').'</a>';
+						echo '<a href="'.$lumise_router->getURI().'lumise-page=products" class="btn-back"><i class="fa fa-reply" aria-hidden="true"></i>'.$lumise->lang('Volver a la Lista').'</a>';
 					}
 					else
-						echo '<p class="no-data">'.$lumise->lang('No data. Please add product.').'</p>';
+						echo '<p class="no-data">'.$lumise->lang('Sin datos. Por favor agregue el producto').'</p>';
 			}?>
 
 	</div>

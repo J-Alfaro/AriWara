@@ -233,12 +233,12 @@
 			<h2><?php echo $lumise->lang('Cliparts'); ?></h2>
 			<a href="<?php echo $lumise_router->getURI();?>lumise-page=clipart" class="add_new">
 				<i class="fa fa-plus"></i>
-				<?php echo $lumise->lang('Add new clipart'); ?>
+				<?php echo $lumise->lang('Agregar nuevo clipart'); ?>
 			</a>
 			<?php if ($can_upload) { ?>
 			<a href="<?php echo $lumise_router->getURI();?>lumise-page=clipart" class="add_new" id="lumise-add-bundle-cliparts">
 				<i class="fa fa-th"></i>
-				<?php echo $lumise->lang('Add multiple Cliparts'); ?>
+				<?php echo $lumise->lang('Agregar multiples Cliparts'); ?>
 			</a>
 			<?php } ?>
 			<?php
@@ -251,21 +251,21 @@
 			<div class="left">
 				<form action="<?php echo $lumise_router->getURI();?>lumise-page=cliparts" method="post">
 					<select name="action" class="art_per_page">
-						<option value="none"><?php echo $lumise->lang('Bulk Actions'); ?></option>
-						<option value="active"><?php echo $lumise->lang('Active'); ?></option>
-						<option value="deactive"><?php echo $lumise->lang('Deactive'); ?></option>
-						<option value="featured"><?php echo $lumise->lang('Featured'); ?></option>
-						<option value="unfeatured"><?php echo $lumise->lang('Unfeatured'); ?></option>
-						<option value="delete"><?php echo $lumise->lang('Delete'); ?></option>
+						<option value="none"><?php echo $lumise->lang('Acciones'); ?></option>
+						<option value="active"><?php echo $lumise->lang('Activo'); ?></option>
+						<option value="deactive"><?php echo $lumise->lang('Inactivo'); ?></option>
+						<option value="featured"><?php echo $lumise->lang('Caracteristicas'); ?></option>
+						<option value="unfeatured"><?php echo $lumise->lang('Sin cabales'); ?></option>
+						<option value="delete"><?php echo $lumise->lang('Eliminar'); ?></option>
 					</select>
 					<input type="hidden" name="id_action" class="id_action">
 					<input type="hidden" name="do" value="action" />
-					<input type="submit" class="lumise_submit" name="action_submit" value="<?php echo $lumise->lang('Apply'); ?>" />
+					<input type="submit" class="lumise_submit" name="action_submit" value="<?php echo $lumise->lang('Aplicar'); ?>" />
 					<?php $lumise->securityFrom();?>
 				</form>
 				<form action="<?php echo $lumise_router->getURI();?>lumise-page=cliparts" method="post" class="less">
 					<select name="per_page" data-action="submit" class="art_per_page">
-						<option value="none">-- <?php echo $lumise->lang('Per page'); ?> --</option>
+						<option value="none">-- <?php echo $lumise->lang('Por pagina'); ?> --</option>
 						<?php
 							$per_pages = array('20', '50', '129', '200', '300');
 
@@ -280,28 +280,28 @@
 							}
 						?>
 					</select>
-					<input type="hidden" name="perpage" value="<?php echo $lumise->lang('Per Page'); ?>" />
+					<input type="hidden" name="perpage" value="<?php echo $lumise->lang('Por pagina'); ?>" />
 					<input type="hidden" name="do" value="limit" />
 					<?php $lumise->securityFrom();?>
 				</form>
 				<form action="<?php echo $lumise_router->getURI();?>lumise-page=cliparts" method="post" class="less">
 					<select name="sort" class="art_per_page" data-action="submit">
-						<option value="created_desc">-- <?php echo $lumise->lang('Sort by'); ?> --</option>
-						<option value="featured" <?php if ($dt_order == 'featured' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Featured only'); ?></option>
-						<option value="active" <?php if ($dt_order == 'active' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Active only'); ?></option>
-						<option value="deactive" <?php if ($dt_order == 'deactive' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Deactive only'); ?></option>
-						<option value="name_asc" <?php if ($dt_order == 'name_asc' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Name'); ?> A->Z</option>
-						<option value="name_desc" <?php if ($dt_order == 'name_desc' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Name'); ?> Z->A</option>
-						<option value="created_asc" <?php if ($dt_order == 'created_asc' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Created date'); ?> &uarr;</option>
-						<option value="created_desc" <?php if ($dt_order == 'created_desc' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Created date'); ?> &darr;</option>
+						<option value="created_desc">-- <?php echo $lumise->lang('Ordenar por'); ?> --</option>
+						<option value="featured" <?php if ($dt_order == 'featured' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Solo destacado'); ?></option>
+						<option value="active" <?php if ($dt_order == 'active' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Solo activo'); ?></option>
+						<option value="deactive" <?php if ($dt_order == 'deactive' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Solo desactivo'); ?></option>
+						<option value="name_asc" <?php if ($dt_order == 'name_asc' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Nombre'); ?> A->Z</option>
+						<option value="name_desc" <?php if ($dt_order == 'name_desc' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Nombre'); ?> Z->A</option>
+						<option value="created_asc" <?php if ($dt_order == 'created_asc' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Fecha de creacion'); ?> &uarr;</option>
+						<option value="created_desc" <?php if ($dt_order == 'created_desc' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Fecha de creacion'); ?> &darr;</option>
 					</select>
-					<input type="hidden" name="sortby" value="<?php echo $lumise->lang('Sortby'); ?>">
+					<input type="hidden" name="sortby" value="<?php echo $lumise->lang('Ordenar por'); ?>">
 					<input type="hidden" name="do" value="sort" />
 					<?php $lumise->securityFrom();?>
 				</form>
 				<form action="<?php echo $lumise_router->getURI();?>lumise-page=cliparts" method="post" class="less">
 					<select name="categories" class="art_per_page" data-action="submit" style="width:150px">
-						<option value="">-- <?php echo $lumise->lang('Categories'); ?> --</option>
+						<option value="">-- <?php echo $lumise->lang('Categorias'); ?> --</option>
 						<?php
 							$cates = $lumise_admin->get_categories();
 							foreach ($cates as $cate) {
@@ -315,8 +315,8 @@
 			</div>
 			<div class="right">
 				<form action="<?php echo $lumise_router->getURI();?>lumise-page=cliparts" method="post" class="less">
-					<input type="search" name="search" class="search" placeholder="<?php echo $lumise->lang('Search ...'); ?>" value="<?php if(isset($_SESSION[$prefix.'data_search'])) echo $_SESSION[$prefix.'data_search']; ?>" style="margin:0px">
-					<input type="hidden" name="search_clipart" value="<?php echo $lumise->lang('Search'); ?>">
+					<input type="search" name="search" class="search" placeholder="<?php echo $lumise->lang('Buscar ...'); ?>" value="<?php if(isset($_SESSION[$prefix.'data_search'])) echo $_SESSION[$prefix.'data_search']; ?>" style="margin:0px">
+					<input type="hidden" name="search_clipart" value="<?php echo $lumise->lang('Buscar'); ?>">
 					<?php $lumise->securityFrom();?>
 				</form>
 			</div>
@@ -335,12 +335,12 @@
 							</div>
 						</th>
 						<th width="20%"><?php echo $lumise->lang('Name'); ?></th>
-						<th><?php echo $lumise->lang('Price').' ('.$currency.')'; ?></th>
-						<th><?php echo $lumise->lang('Categories'); ?></th>
-						<th><?php echo $lumise->lang('Tags'); ?></th>
-						<th><?php echo $lumise->lang('Thumbnail'); ?></th>
-						<th><?php echo $lumise->lang('Featured'); ?></th>
-						<th><?php echo $lumise->lang('Status'); ?></th>
+						<th><?php echo $lumise->lang('Precio').' ('.$currency.')'; ?></th>
+						<th><?php echo $lumise->lang('Categorias'); ?></th>
+						<th><?php echo $lumise->lang('Etiquetas'); ?></th>
+						<th><?php echo $lumise->lang('Miniatura'); ?></th>
+						<th><?php echo $lumise->lang('Destacadas'); ?></th>
+						<th><?php echo $lumise->lang('Estado'); ?></th>
 					</tr>
 				</thead>
 				<tbody>
@@ -404,9 +404,9 @@
 										<?php
 											if (isset($art['active'])) {
 												if ($art['active'] == 1) {
-													echo '<em class="pub">'.$lumise->lang('active').'</em>';
+													echo '<em class="pub">'.$lumise->lang('Activo').'</em>';
 												} else {
-													echo '<em class="un pub">'.$lumise->lang('deactive').'</em>';
+													echo '<em class="un pub">'.$lumise->lang('Inactivo').'</em>';
 												}
 											}
 										?>
@@ -422,11 +422,11 @@
 
 		<?php } else {
 					if (isset($total_record[0]['total']) && $total_record[0]['total'] > 0) {
-						echo '<p class="no-data">'.$lumise->lang('Apologies, but no results were found.').'</p>';
+						echo '<p class="no-data">'.$lumise->lang('Disculpas, pero no se encontraron resultados').'</p>';
 						$_SESSION[$prefix.'data_search'] = '';
-						echo '<a href="'.$lumise_router->getURI().'lumise-page=cliparts" class="btn-back"><i class="fa fa-reply" aria-hidden="true"></i>'.$lumise->lang('Back To Lists').'</a>';
+						echo '<a href="'.$lumise_router->getURI().'lumise-page=cliparts" class="btn-back"><i class="fa fa-reply" aria-hidden="true"></i>'.$lumise->lang('Volver a la Lista').'</a>';
 					}
-					else echo '<p class="no-data">'.$lumise->lang('No data. Please add clipart.').'</p>';
+					else echo '<p class="no-data">'.$lumise->lang('Sin datos. Por favor agregue imágenes prediseñadas').'</p>';
 			}?>
 
 	</div>
@@ -442,7 +442,7 @@
 		</header>
 		<div class="lumise-langs-wrp lumise_content">
 			<div class="lumise_form_group">
-				<span><?php echo $lumise->lang('Set Categories'); ?></span>
+				<span><?php echo $lumise->lang('Establecer Categorias'); ?></span>
 				<div class="lumise_form_content">
 					<ul class="list-cate" id="lumise-list-categories"></ul>
 					<div id="create-category-form" style="display: none;">
@@ -452,48 +452,48 @@
 								<img src="<?php echo $lumise->cfg->assets_url; ?>assets/images/img-none.png" class="img-upload" id="lumise-category-preview">
 								<input type="file" accept="image/png,image/gif,image/jpeg,image/svg+xml" id="file_upload" data-file-select="true" data-file-preview="#lumise-category-preview" data-file-input="#lumise-category-upload" data-file-thumbn-width="320">
 								<input type="hidden" name="category[upload]" id="lumise-category-upload" />
-								<label for="file_upload"><?php echo $lumise->lang('Choose a file'); ?></label>
-								<button data-btn="true" data-file-delete="true"  data-file-preview="#lumise-category-preview" data-file-input="#lumise-category-upload"><?php echo $lumise->lang('Remove file'); ?></button>
+								<label for="file_upload"><?php echo $lumise->lang('Elige un archivo'); ?></label>
+								<button data-btn="true" data-file-delete="true"  data-file-preview="#lumise-category-preview" data-file-input="#lumise-category-upload"><?php echo $lumise->lang('Elimar archivo'); ?></button>
 							</div>
 						</div>
 						<div class="lumise_form_group">
-							<span><?php echo $lumise->lang('Category name'); ?></span>
+							<span><?php echo $lumise->lang('Nombre Categoria'); ?></span>
 							<div class="lumise_form_content">
 								<input type="text" name="category[name]" />
 							</div>
 						</div>
 						<div class="lumise_form_group">
-							<span><?php echo $lumise->lang('Parent category'); ?></span>
+							<span><?php echo $lumise->lang('Categoria Principal'); ?></span>
 							<div class="lumise_form_content">
 								<select name="category[parent]" id="lumise-parent-categories"></select>
 							</div>
 						</div>
 						<footer>
-							<button class="lumise-btn-primary"><?php echo $lumise->lang('Create new category'); ?></button>
-							<button data-btn data-click="toggle-form"><?php echo $lumise->lang('Cancel'); ?></button>
+							<button class="lumise-btn-primary"><?php echo $lumise->lang('Crear nueva Categoria'); ?></button>
+							<button data-btn data-click="toggle-form"><?php echo $lumise->lang('Cancelar'); ?></button>
 						</footer>
 					</div>
 					<a href="<?php echo $lumise_router->getURI();?>lumise-page=categories&type=cliparts" target=_blank class="add_cate" data-click="toggle-form">
 						<i class="fa fa-plus"></i>
-						<?php echo $lumise->lang('Create new category'); ?>
+						<?php echo $lumise->lang('Crear nueva Categoria'); ?>
 					</a>
 				</div>
 			</div>
 			<div class="lumise_form_group">
-				<span><?php echo $lumise->lang('Set Tags'); ?></span>
+				<span><?php echo $lumise->lang('Establecer etiqueta'); ?></span>
 				<div class="lumise_form_content">
 					<input type="text" id="lumise-cliparts-tags" name="tags" placeholder="" value="<?php echo !empty($data['tags']) ? $data['tags'] : '' ?>" />
-					<em class="notice"><?php echo $lumise->lang('Example: tag1, tag2, tag3 ...'); ?></em>
+					<em class="notice"><?php echo $lumise->lang('Ejemplo: etiqueta1, etiqueta2, etiqueta3 ...'); ?></em>
 				</div>
 			</div>
 			<div class="lumise_form_group">
-				<span><?php echo $lumise->lang('Set Price'); ?></span>
+				<span><?php echo $lumise->lang('Fijar precio'); ?></span>
 				<div class="lumise_form_content">
 					<input type="text" id="lumise-cliparts-price" name="price" value="<?php echo !empty($data['price']) ? $data['price'] : '' ?>" />
 				</div>
 			</div>
 			<div class="lumise_form_group">
-				<span><?php echo $lumise->lang('Featured'); ?></span>
+				<span><?php echo $lumise->lang('Destacadas'); ?></span>
 				<div class="lumise_form_content">
 					<div class="lumise-toggle">
 						<input type="checkbox" name="category[featured]" id="lumise-cliparts-featured">
@@ -503,15 +503,15 @@
 				</div>
 			</div>
 			<div class="lumise_form_group">
-				<span><?php echo $lumise->lang('Upload Cliparts'); ?></span>
+				<span><?php echo $lumise->lang('Cargar Cliparts'); ?></span>
 				<div class="lumise_form_group">
-					<h3 id="lumise-cliparts-bundle-stt"><?php echo $lumise->lang('Processed '); ?><span>0/0</span></h3>
+					<h3 id="lumise-cliparts-bundle-stt"><?php echo $lumise->lang('Procesado '); ?><span>0/0</span></h3>
 					<div id="lumise-upload-form">
 						<i class="fa fa-cloud-upload"></i>
-						<span><?php echo $lumise->lang('Click or drop images here'); ?></span>
+						<span><?php echo $lumise->lang('Haga clic o suelte las imágenes aquí'); ?></span>
 						<input type="file" multiple="true" accept="image/png,image/jpeg,image/svg+xml" />
 					</div>
-					<em class="notice"><?php echo $lumise->lang('Supported files svg, png, jpg, jpeg. Max size 5MB'); ?></em>
+					<em class="notice"><?php echo $lumise->lang('Archivos soportados svg, png, jpg, jpeg. Tamaño máximo 5 m'); ?></em>
 				</div>
 			</div>
 		</div>

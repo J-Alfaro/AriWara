@@ -122,7 +122,7 @@
 	<div class="lumise_content">
 
 		<div class="lumise_header">
-			<h2><?php echo $lumise->lang('Orders'); ?></h2>
+			<h2><?php echo $lumise->lang('Pedidos'); ?></h2>
 			<?php
 				$lumise_page = isset($_GET['lumise-page']) ? $_GET['lumise-page'] : '';
 				echo $lumise_helper->breadcrumb($lumise_page);
@@ -134,7 +134,7 @@
             <div class="left">
                 <form action="<?php echo $lumise_router->getURI();?>lumise-page=orders" method="post">
                     <select name="per_page" class="orders_per_page" data-action="submit">
-                    	<option value="none">-- <?php echo $lumise->lang('Per page'); ?> --</option>
+                    	<option value="none">-- <?php echo $lumise->lang('Por pagina'); ?> --</option>
                         <?php
                             $per_pages = array('10', '15', '20', '100');
 
@@ -153,15 +153,15 @@
                 </form>
                 <form action="<?php echo $lumise_router->getURI();?>lumise-page=orders" method="post">
                     <select name="sort" class="orders_per_page" data-action="submit">
-                    	<option value="">-- <?php echo $lumise->lang('Sort by'); ?> --</option>
-                        <option value="order_id_asc" <?php if ($dt_order == 'order_id_asc' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Order Id'); ?> &uarr;</option>
-                        <option value="order_id_desc" <?php if ($dt_order == 'order_id_desc' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Order Id'); ?> &darr;</option>
-                        <option value="total_asc" <?php if ($dt_order == 'total_asc' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Price'); ?> &uarr;</option>
-                        <option value="total_desc" <?php if ($dt_order == 'total_desc' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Price'); ?> &darr;</option>
-                        <option value="created_asc" <?php if ($dt_order == 'created_asc' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Created At'); ?> &uarr;</option>
-                        <option value="created_desc" <?php if ($dt_order == 'created_desc' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Created At'); ?> &darr;</option>
-                        <option value="updated_asc" <?php if ($dt_order == 'updated_asc' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Updated At'); ?> &uarr;</option>
-                        <option value="updated_desc" <?php if ($dt_order == 'updated_desc' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Updated At'); ?> &darr;</option>
+                    	<option value="">-- <?php echo $lumise->lang('Ordenar por'); ?> --</option>
+                        <option value="order_id_asc" <?php if ($dt_order == 'order_id_asc' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Orden Id'); ?> &uarr;</option>
+                        <option value="order_id_desc" <?php if ($dt_order == 'order_id_desc' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Orden Id'); ?> &darr;</option>
+                        <option value="total_asc" <?php if ($dt_order == 'total_asc' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Precio'); ?> &uarr;</option>
+                        <option value="total_desc" <?php if ($dt_order == 'total_desc' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Precio'); ?> &darr;</option>
+                        <option value="created_asc" <?php if ($dt_order == 'created_asc' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Creado en'); ?> &uarr;</option>
+                        <option value="created_desc" <?php if ($dt_order == 'created_desc' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Creado en'); ?> &darr;</option>
+                        <option value="updated_asc" <?php if ($dt_order == 'updated_asc' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Actualizado en'); ?> &uarr;</option>
+                        <option value="updated_desc" <?php if ($dt_order == 'updated_desc' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Actualizado en'); ?> &darr;</option>
                     </select>
                     <?php $lumise->securityFrom();?>
                     <input type="hidden" name="do" value="action"/>
@@ -169,8 +169,8 @@
             </div>
             <div class="right">
                 <form action="<?php echo $lumise_router->getURI();?>lumise-page=orders" method="post">
-                    <input type="search" name="search" class="search" placeholder="<?php echo $lumise->lang('Search (ID or Status)'); ?>" value="<?php if(isset($_SESSION[$prefix.'data_search'])) echo $_SESSION[$prefix.'data_search']; ?>">
-                    <input  class="lumise_submit" type="submit" name="search_orders" value="<?php echo $lumise->lang('Search'); ?>">
+                    <input type="search" name="search" class="search" placeholder="<?php echo $lumise->lang('Buscar por (ID o Estado)'); ?>" value="<?php if(isset($_SESSION[$prefix.'data_search'])) echo $_SESSION[$prefix.'data_search']; ?>">
+                    <input  class="lumise_submit" type="submit" name="search_orders" value="<?php echo $lumise->lang('Buscar'); ?>">
                     <?php $lumise->securityFrom();?>
 
                 </form>
@@ -181,14 +181,14 @@
 			<table class="lumise_table lumise_orders">
 				<thead>
 					<tr>
-						<th width="20%"><?php echo $lumise->lang('Order Id'); ?></th>
-						<th><?php echo $lumise->lang('Products'); ?></th>
+						<th width="20%"><?php echo $lumise->lang('Id Pedido'); ?></th>
+						<th><?php echo $lumise->lang('Productos'); ?></th>
 						
-                        <th width="10%"><?php echo $lumise->lang('Status'); ?></th>
-                        <th width="10%"><?php echo $lumise->lang('Updated'); ?></th>
-                        <th width="10%"><?php echo $lumise->lang('Total Price'); ?></th>
+                        <th width="10%"><?php echo $lumise->lang('Estado'); ?></th>
+                        <th width="10%"><?php echo $lumise->lang('Actualizado'); ?></th>
+                        <th width="10%"><?php echo $lumise->lang('Precio Total'); ?></th>
                         <?php if($lumise->connector->platform == 'php'):?>
-						<th width="10%"><?php echo $lumise->lang('Actions'); ?></th>
+						<th width="10%"><?php echo $lumise->lang('Acciones'); ?></th>
                         <?php endif;?>
 					</tr>
 				</thead>
@@ -199,7 +199,7 @@
 	                    foreach($items['rows'] as $order):
 	                ?>
 	                <tr>
-						<td><a href="<?php echo $lumise_router->getURI();?>lumise-page=order&order_id=<?php echo $order['order_id'];?>"><?php printf($lumise->lang('Order #%s'), $order['order_id']);?></a></td>
+						<td><a href="<?php echo $lumise_router->getURI();?>lumise-page=order&order_id=<?php echo $order['order_id'];?>"><?php printf($lumise->lang('Pedido #%s'), $order['order_id']);?></a></td>
 						<td><?php 
                         $products = $lumise->lib->get_order_products($order['order_id']);
                         if(count($products)>0){
@@ -225,7 +225,7 @@
 						<td><?php echo date('Y/m/d', strtotime($order['updated']));?></td>
                         <td><?php echo $lumise->lib->price($order['total']);?></td>
                         <?php if($lumise->connector->platform == 'php'):?>
-	                    <td><a href="#" class="lumise-item-action" data-item="<?php echo $order['order_id'];?>" data-func="delete"><?php echo $lumise->lang('Delete'); ?></a></td>
+	                    <td><a href="#" class="lumise-item-action" data-item="<?php echo $order['order_id'];?>" data-func="delete"><?php echo $lumise->lang('Eliminar'); ?></a></td>
                         <?php endif;?>
 					</tr>
 	                    <?php
@@ -235,7 +235,7 @@
 	                ?>
 	                <tr>
 	                    <td colspan="6">
-	                        <p class="no-data"><?php echo $lumise->lang('Apologies, but no results were found'); ?></p>
+	                        <p class="no-data"><?php echo $lumise->lang('Disculpas, pero no se encontraron resultados'); ?></p>
 	                    </td>
 	                </tr>
 	                    
