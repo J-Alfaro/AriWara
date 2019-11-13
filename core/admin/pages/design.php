@@ -1,5 +1,5 @@
 <?php
-	$title = "Edit Design";
+	$title = "Editar diseño";
 
 	$arr = Array ("name");
 	$design = $lumise_admin->get_rows_custom($arr,'lumise_designs');

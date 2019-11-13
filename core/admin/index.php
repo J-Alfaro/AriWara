@@ -255,7 +255,7 @@ class lumise_router {
 				'capability' => 'lumise_read_languages'
 			),*/
 			'orders' => array(
-				'title' => $lumise->lang('Ordenes'),
+				'title' => $lumise->lang('Pedidos'),
 				'icon'  => '<i class="fa fa-shopping-bag"></i>',
 				'link'   => $this->getURI().'lumise-page=orders',
 				'child' => array(
@@ -326,13 +326,13 @@ class lumise_router {
 				'capability' => 'lumise_read_addons',
 			),
 			*/
-			/*
+			
 			'settings' => array(
 				'title' => $lumise->lang('Settings'),
 				'icon'  => '<i class="fa fa-cog"></i>',
 				'link'   => $this->getURI().'lumise-page=settings',
 				'capability' => 'lumise_read_settings'
-			),*/
+			),
 		));
 		
 		$this->_load_assets = $load_assets;
