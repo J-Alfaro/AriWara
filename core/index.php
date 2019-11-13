@@ -7,7 +7,7 @@
 	if($lumise->is_app()) :
 	
 ?><!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="utf-8" />
 		<title><?php echo $lumise->lang($lumise->cfg->settings['title']); ?></title>
