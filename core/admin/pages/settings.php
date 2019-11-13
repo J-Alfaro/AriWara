@@ -22,7 +22,7 @@
 	
 	$components = array_merge($components, array(
 		'shop' => $lumise->lang('Shopping cart'),
-		'back' => $lumise->lang('Back to Shop'),
+		'back' => $lumise->lang('Volver a comprar'),
 	));
 	
 	$arg = array(

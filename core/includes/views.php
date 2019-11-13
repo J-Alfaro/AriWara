@@ -34,7 +34,7 @@ class lumise_views extends lumise_lib {
 		else 
 			$back_link = $cfg->settings['logo_link'];
 			
-		$logo = $this->main->apply_filters('logo-nav', '<a data-view="logo" href="'.$cfg->settings['logo_link'].'"><img src="'.$logo.'" /></a>');
+		$logo = $this->main->apply_filters('logo-nav', '<a data-view="logo" href="'.$cfg->settings['logo_link'].'"><img src="assets/images/logo_1.png" /></a>');
 		
 		echo $logo;
 	
@@ -48,18 +48,18 @@ class lumise_views extends lumise_lib {
 			ob_start();
 		?>
 		<li data-tool="file" data-view="list">
-			<span><?php echo $this->main->lang('File'); ?></span>
+			<span><?php echo $this->main->lang('Archivo'); ?></span>
 			<ul data-view="sub" id="lumise-file-nav">
 				<li data-func="import">
-					<span><?php echo $this->main->lang('Import file'); ?></span><small>(Ctrl+O)</small>
+					<span><?php echo $this->main->lang('Importar archivo'); ?></span><small>(Ctrl+O)</small>
 					<input type="file" id="lumise-import-json" />
 				</li>
 				<li data-func="clear">
-					<span><?php echo $this->main->lang('Clear all'); ?></span><small>(Ctrl+E)</small>
+					<span><?php echo $this->main->lang('Borrar todo'); ?></span><small>(Ctrl+E)</small>
 				</li>
 				<li data-view="sp"></li>
 				<li data-func="save">
-					<span><?php echo $this->main->lang('Save to My Designs'); ?></span><small>(Ctrl+S)</small>
+					<span><?php echo $this->main->lang('Guardar en mis diseños'); ?></span><small>(Ctrl+S)</small>
 				</li>
 				<?php 
 					if ($this->main->connector->is_admin() || 
@@ -67,7 +67,7 @@ class lumise_views extends lumise_lib {
 					) {
 				?>
 					<li data-func="saveas">
-						<span><?php echo $this->main->lang('Save as file'); ?></span><small>(Ctrl+Shift+S)</small>
+						<span><?php echo $this->main->lang('Guardar como archivo'); ?></span><small>(Ctrl+Shift+S)</small>
 					</li>
 				<?php } ?>
 			</ul>
@@ -80,16 +80,16 @@ class lumise_views extends lumise_lib {
 		<!-- Avalable filters: file-nav -->
 		<?php ob_start(); ?>
 		<li data-tool="designs" data-callback="designs">
-			<span><?php echo $this->main->lang('Designs'); ?></span>
+			<span><?php echo $this->main->lang('Diseños'); ?></span>
 			<ul data-view="sub">
 				<header>
 					<h3>
-						<?php echo $this->main->lang('My designs'); ?>
+						<?php echo $this->main->lang('Mis diseños'); ?>
 						<span id="lumise-designs-search">
-							<input type="search" placeholder="<?php echo $this->main->lang('Search designs'); ?>" />
+							<input type="search" placeholder="<?php echo $this->main->lang('Buscar diseños'); ?>" />
 						</span>
 					</h3>
-					<i class="lumisex-android-close close" title="<?php echo $this->main->lang('Close'); ?>"></i>
+					<i class="lumisex-android-close close" title="<?php echo $this->main->lang('Cerrar'); ?>"></i>
 				</header>
 				<li>
 					<ul id="lumise-designs-category">
@@ -107,9 +107,9 @@ class lumise_views extends lumise_lib {
 					</ul>
 					<ul id="lumise-saved-designs">
 						<p class="empty"><?php 
-							echo $this->main->lang('You have not saved any designs yet!'); 
+							echo $this->main->lang('¡Todavia no has guardado ningún diseño!'); 
 							echo '<br>';
-							echo $this->main->lang('After designing, press Ctrl+S to save your designs in here.'); ?>
+							echo $this->main->lang('Después de diseñar, presione Ctrl + S para guardar sus diseños aquí.'); ?>
 						</p>
 					</ul>
 				</li>
@@ -141,16 +141,16 @@ class lumise_views extends lumise_lib {
 		ob_start(); 
 		
 		?><li data-tool="print"<?php echo $alwd; ?>>
-			<span><?php echo $this->main->lang('Print'); ?></span>
+			<span><?php echo $this->main->lang('Imprimir'); ?></span>
 			<ul data-view="sub" id="lumise-print-nav" data-align="center">
 				<header>
 					<h3>
-						<?php echo $this->main->lang('Print design'); ?>
+						<?php echo $this->main->lang('Diseño de Impresión'); ?>
 					</h3>
 					<i class="lumisex-android-close close" title="<?php echo $this->main->lang('Close'); ?>"></i>
 				</header>
 				<li data-row="format">
-					<label><?php echo $this->main->lang('Select format'); ?>:</label>
+					<label><?php echo $this->main->lang('Seleccionar formato'); ?>:</label>
 					<span>
 						<div class="lumise_radios">
 							<div class="lumise-radio">
@@ -175,7 +175,7 @@ class lumise_views extends lumise_lib {
 					</span>
 				</li>
 				<li data-row="size">
-					<label><?php echo $this->main->lang('Paper Size'); ?>:</label>
+					<label><?php echo $this->main->lang('Tamaño de papel'); ?>:</label>
 					<!-- Avalable filters: print-sizes -->
 					<select name="select-size" class="doPrint" data-dp="size">
 						<?php
@@ -192,41 +192,41 @@ class lumise_views extends lumise_lib {
 					</select>
 				</li>
 				<li data-row="csize">
-					<label><?php echo $this->main->lang('Custom size'); ?>:</label>
+					<label><?php echo $this->main->lang('Tamaño personalizado'); ?>:</label>
 					<input type="text" class="doPrint" data-dp="csize" name="size" value="21 x 29.7" />
 				</li>
 				<li data-row="unit">
 					<input type="radio" data-dp="unit" class="doPrint" name="print-unit" id="print-unit-cm" checked data-unit="cm" />
-					<label for="print-unit-cm">Centimet</label>
+					<label for="print-unit-cm">Centimetro</label>
 					<input type="radio" data-dp="unit" class="doPrint" name="print-unit" id="print-unit-inch" data-unit="inch" />
 					<label for="print-unit-inch"> Inch</label>
 					<input type="radio" data-dp="unit" class="doPrint" name="print-unit" id="print-unit-px" data-unit="px" />
 					<label for="print-unit-px"> Pixel</label>
 				</li>
 				<li data-row="orien">
-					<label><?php echo $this->main->lang('Orientation'); ?>:</label>
+					<label><?php echo $this->main->lang('Orientación'); ?>:</label>
 					<select name="orientation" class="doPrint" data-dp="orien">
 						<option value="portrait"><?php 
-							echo $this->main->lang('Portrait');
+							echo $this->main->lang('Retrato');
 						?></option>
 						<option value="landscape"><?php 
-							echo $this->main->lang('Landscape'); 
+							echo $this->main->lang('Paisaje'); 
 						?></option>
 					</select>
 				</li>
 				<li data-row="base">
-					<label><?php echo $this->main->lang('Include base?'); ?></label>
+					<label><?php echo $this->main->lang('Incluye base?'); ?></label>
 					<div class="lumise-switch">
 						<input data-dp="base" id="lumise-print-base" type="checkbox" value="" class="lumise-toggle-button doPrint">
-						<span class="lumise-toggle-label" data-on="YES" data-off="NO"></span>
+						<span class="lumise-toggle-label" data-on="SI" data-off="NO"></span>
 						<span class="lumise-toggle-handle"></span>
 					</div>
 				</li>
 				<li data-row="overflow">
-					<label><?php echo $this->main->lang('Hide overflow?'); ?></label>
+					<label><?php echo $this->main->lang('Ocultar desbordamiento?'); ?></label>
 					<div class="lumise-switch">
 						<input data-dp="overflow" id="lumise-print-overflow" type="checkbox" value="" class="lumise-toggle-button doPrint">
-						<span class="lumise-toggle-label" data-on="YES" data-off="NO"></span>
+						<span class="lumise-toggle-label" data-on="SI" data-off="NO"></span>
 						<span class="lumise-toggle-handle"></span>
 					</div>
 				</li>
@@ -248,11 +248,11 @@ class lumise_views extends lumise_lib {
 				</li>
 				<li>
 					<button class="lumise-btn doPrint" data-dp="print" data-func="print">
-						<?php echo $this->main->lang('Print Now'); ?> 
+						<?php echo $this->main->lang('Imprimir ahora'); ?> 
 						<i class="lumisex-printer"></i>
 					</button>
 					<button class="lumise-btn gray doPrint" data-dp="download" data-func="download">
-						<?php echo $this->main->lang('Download'); ?> 
+						<?php echo $this->main->lang('Descargar'); ?> 
 						<i class="lumisex-android-download"></i>
 					</button>
 				</li>
@@ -268,7 +268,7 @@ class lumise_views extends lumise_lib {
 		<?php ob_start(); ?>
 		<li data-tool="share">
 			<span>
-				<?php echo $this->main->lang('Share'); ?>
+				<?php echo $this->main->lang('Compartir'); ?>
 			</span>
 			<ul data-view="sub" class="lumise-tabs-nav" data-align="center" id="lumise-shares-wrp" data-nav="link">
 				<header>
@@ -285,17 +285,17 @@ class lumise_views extends lumise_lib {
 				</header>
 				<li data-view="link" data-active="true">
 					<p data-phase="1" class="mb1">
-						<?php echo $this->main->lang('Create the link to share your current design for everyone'); ?>
+						<?php echo $this->main->lang('Crea el enlace para compartir su diseño actual para todos'); ?>
 					</p>
 					<p data-view="link" class="mb1" data-phase="1">
-						<input type="text" placeholder="<?php echo $this->main->lang('Enter the title of design'); ?>" id="lumise-share-link-title" />
+						<input type="text" placeholder="<?php echo $this->main->lang('Ingrese el título del diseño'); ?>" id="lumise-share-link-title" />
 					</p>
 					<p data-phase="1">
 						<button class="lumise-btn right" data-func="create-link">
-							<?php echo $this->main->lang('Create link'); ?>
+							<?php echo $this->main->lang('Crear enlace'); ?>
 						</button>
 						<button class="lumise-btn right white mr1"  data-nav="history" data-func="nav">
-							<?php echo $this->main->lang('View history'); ?>
+							<?php echo $this->main->lang('Ver historial'); ?>
 						</button>
 					</p>
 					<p class="notice success" data-phase="2">
@@ -338,7 +338,7 @@ class lumise_views extends lumise_lib {
 		<?php ob_start(); ?>
 		<li data-tool="help">
 			<span>
-				<?php echo $this->main->lang('Help'); ?>
+				<?php echo $this->main->lang('Ayuda'); ?>
 			</span>
 			<ul data-view="sub" class="lumise-tabs-nav">
 				<li data-view="header">
@@ -422,8 +422,8 @@ class lumise_views extends lumise_lib {
 	<path d="M491.318,235.318H20.682C9.26,235.318,0,244.577,0,256s9.26,20.682,20.682,20.682h470.636    c11.423,0,20.682-9.259,20.682-20.682C512,244.578,502.741,235.318,491.318,235.318z"/><path d="M491.318,78.439H20.682C9.26,78.439,0,87.699,0,99.121c0,11.422,9.26,20.682,20.682,20.682h470.636    c11.423,0,20.682-9.26,20.682-20.682C512,87.699,502.741,78.439,491.318,78.439z"/><path d="M491.318,392.197H20.682C9.26,392.197,0,401.456,0,412.879s9.26,20.682,20.682,20.682h470.636    c11.423,0,20.682-9.259,20.682-20.682S502.741,392.197,491.318,392.197z"/>
 </g><g xmlns="http://www.w3.org/2000/svg" style="display:none;transform:scale(.85) translateY(3px);" id="__x"><path xmlns="http://www.w3.org/2000/svg" d="M505.943,6.058c-8.077-8.077-21.172-8.077-29.249,0L6.058,476.693c-8.077,8.077-8.077,21.172,0,29.249    C10.096,509.982,15.39,512,20.683,512c5.293,0,10.586-2.019,14.625-6.059L505.943,35.306    C514.019,27.23,514.019,14.135,505.943,6.058z"/><path d="M505.942,476.694L35.306,6.059c-8.076-8.077-21.172-8.077-29.248,0c-8.077,8.076-8.077,21.171,0,29.248l470.636,470.636    c4.038,4.039,9.332,6.058,14.625,6.058c5.293,0,10.587-2.019,14.624-6.057C514.018,497.866,514.018,484.771,505.942,476.694z"/></g></svg>
 	<ul data-block="left" data-resp="undo-redo">
-		<li id="lumise-design-undo" title="Ctrl+Z" class="disabled"><?php echo $this->main->lang('Undo'); ?></li>
-		<li id="lumise-design-redo" title="Ctrl+Shift+Z" class="disabled"><?php echo $this->main->lang('Redo'); ?></li>
+		<li id="lumise-design-undo" title="Ctrl+Z" class="disabled"><?php echo $this->main->lang('Deshacer'); ?></li>
+		<li id="lumise-design-redo" title="Ctrl+Shift+Z" class="disabled"><?php echo $this->main->lang('Listo'); ?></li>
 	</ul>
 
 	<ul data-block="right">
@@ -441,7 +441,7 @@ class lumise_views extends lumise_lib {
 		if (count($get_langs) > 0 && $this->main->cfg->settings['allow_select_lang'] == '1') {
 
 			$langs = $this->main->langs();
-			array_unshift($get_langs, 'en');
+			array_unshift($get_langs, 'es');
 
 		?>
 		<?php ob_start(); ?>
@@ -539,8 +539,8 @@ class lumise_views extends lumise_lib {
 			if (in_array('product', $components)) {
 		?>
 		<li id="lumise-proceed">
-			<button id="lumise-cart-action" class="lumise-btn-primary" data-add="<?php echo $this->main->lang('Add to cart'); ?>" data-update="<?php echo $this->main->lang('Update cart'); ?>" data-action="update-cart">
-				<span><?php echo $this->main->lang('Add to cart'); ?></span> 
+			<button id="lumise-cart-action" class="lumise-btn-primary" data-add="<?php echo $this->main->lang('Añadir a carrito'); ?>" data-update="<?php echo $this->main->lang('Update cart'); ?>" data-action="update-cart">
+				<span><?php echo $this->main->lang('Agregar a carrito'); ?></span> 
 				<i class="lumisex-android-arrow-forward"></i>
 			</button>
 		</li>
@@ -570,8 +570,8 @@ class lumise_views extends lumise_lib {
 					<strong class="lumise-product-price-wrp">
 						<?php echo $this->main->lang('Total:'); ?> <span class="lumise-product-price"></span>
 					</strong>
-					<button id="lumise-cart-action" class="lumise-btn-primary" data-add="<?php echo $this->main->lang('Add to cart'); ?>" data-update="<?php echo $this->main->lang('Update cart'); ?>" data-action="update-cart">
-						<?php echo $this->main->lang('Add to cart'); ?> 
+					<button id="lumise-cart-action" class="lumise-btn-primary" data-add="<?php echo $this->main->lang('Agregar a carrito'); ?>" data-update="<?php echo $this->main->lang('Update cart'); ?>" data-action="update-cart">
+						<?php echo $this->main->lang('Añadir a carrito'); ?> 
 						<img src="<?php echo $this->main->cfg->assets_url; ?>assets/images/cart.svg" />
 					</button>
 				</footer>
@@ -590,7 +590,7 @@ class lumise_views extends lumise_lib {
 		if (in_array('back', $components)) {
 		?>
 		<li>
-			<a href="<?php echo $back_link;?>" class="back_shop"><?php echo $this->main->lang('Back To Shop'); ?></a>
+			<a href="<?php echo $back_link;?>" class="back_shop"><?php echo $this->main->lang('Volver a comprar'); ?></a>
 		</li>
 		<?php } ?>
 		<!-- Avalable hook: after_cart -->

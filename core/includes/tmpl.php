@@ -26,7 +26,7 @@ class lumise_tmpl_register {
 						<price></price>
 						<sku></sku>
 						<button class="lumise-btn white" id="lumise-change-product">
-							'.$lumise->lang('Change product').'
+							'.$lumise->lang('Cambiar Producto').'
 							<i class="lumisex-arrow-swap"></i>
 						</button>
 						<desc>

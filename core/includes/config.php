@@ -642,7 +642,7 @@ class lumise_cfg extends lumise_tmpl_register{
 			'63'=> $lumise->lang('Search product'),
 			'64'=> $lumise->lang('Print Technologies'),
 			'65'=> $lumise->lang('Side'),
-			'66'=> $lumise->lang('Quantity'),
+			'66'=> $lumise->lang('Cantidad'),
 			'67'=> $lumise->lang('Prices table'),
 			'68'=> $lumise->lang('Details'),
 			'69'=> $lumise->lang('More'),

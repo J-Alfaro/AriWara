@@ -51,7 +51,7 @@ include(theme('header.php'));
                                 <input type="number" step="1" min="1" max="" name="quantity" value="1" inputmode="numeric">
                                 <?php if($has_template): ?>
                                     <a href="<?php echo $lumise->cfg->url.'add-cart.php?product='.$value['id']; ?>" class="lumise-add">
-	                                    <?php echo $lumise->lang('Add to cart'); ?>
+	                                    <?php echo $lumise->lang('Añadir a carrito'); ?>
 	                                </a>
                                 <?php endif; ?>
                                 <a href="<?php echo $lumise->cfg->tool_url.'?product='.$value['id']; ?>" class="lumise-custom">
