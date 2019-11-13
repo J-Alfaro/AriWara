@@ -33,7 +33,7 @@ class LumiseView {
 	                    </a>
                     <?php endif;?>
                     <a href="<?php echo $lumise->cfg->tool_url.'?product='.$value['id']; ?>" class="lumise-custom">
-	                    <?php echo $lumise->lang('Customize'); ?>
+	                    <?php echo $lumise->lang('Personalizar'); ?>
 	                </a>
                 </div>
             </li>

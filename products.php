@@ -42,7 +42,7 @@ $page_title = 'Products';
 include(theme('header.php'));
 
 $categories = $lumise->lib->get_categories('products');
-$cat_options = array('' => '-- Categories --');
+$cat_options = array('' => '-- Categorías --');
 foreach($categories as $cat){
     $cat_options[$cat['id']] = $cat['name'];
 }
@@ -58,10 +58,10 @@ $filters = array(
         'type' => 'dropdown',
         'options' => array(
             '' => '-- Sortby --',
-            'name_asc' => 'Name Asc',
-            'name_desc' => 'Name Desc',
-            'order_asc' => 'Order Asc',
-            'order_desc' => 'Order Desc',
+            'name_asc' => 'Nombre Asc',
+            'name_desc' => 'Nombre Desc',
+            'order_asc' => 'Orden Asc',
+            'order_desc' => 'Orden Desc',
         ),
         'default' => '',
         'val' => $dt_order
@@ -72,7 +72,7 @@ $filters = array(
 ?>
         <div class="lumise-bread">
             <div class="container">
-                <h1><?php echo $lumise->lang('Lumise Shop'); ?></h1>
+                <h1><?php echo $lumise->lang('Tienda AriWara'); ?></h1>
             </div>
         </div>
         <div class="lumise-products">

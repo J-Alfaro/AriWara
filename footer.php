@@ -3,48 +3,48 @@
 <footer class="footer">
     <div class="container">
         <div class="footer_content">
-            <a href="https://www.lumise.com" class="footer_logo"><img src="https://www.lumise.com/assets/images/logo_white.png"></a>
+            <a href="#" class="footer_logo"><img src="assets/images/logo_footer.png"></a>
             <p>
-                Add: Hongou, Bunkyo, Tokyo.<br>
-                Email: <a href="mailto:contact@lumise.com" target="_blank">contact@lumise.com</a><br>
-                Help: <a href="https://help.lumise.com" target="_blank">help.lumise.com</a>
+                Dirección: Universidad Privada de Tacna.<br>
+                Correo: <a href="#" target="_blank">contacto@ariwara.com</a><br>
+                Ayuda: <a href="#" target="_blank">ayuda.ariwara.com</a>
             </p>
             <ul class="tsd_social">
-                <li><a href="https://facebook.com/lumisecom" target="_blank" class="fa fa-facebook"></a></li>
-                <li><a href="https://twitter.com/lumisecom" target="_blank" class="fa fa-twitter"></a></li>
-                <li><a href="https://instagram.com/lumisecom" target="_blank" class="fa fa-instagram"></a></li>
+                <li><a href="#" target="_blank" class="fa fa-facebook"></a></li>
+                <li><a href="#" target="_blank" class="fa fa-twitter"></a></li>
+                <li><a href="#" target="_blank" class="fa fa-instagram"></a></li>
             </ul>
         </div>
         <div class="footer_content">
-            <h4>Custom care</h4>
+            <h4>Nuestra Empresa</h4>
             <ul class="link">
-                <li><a href="http://king-theme.com">About Us</a></li>
-                <li><a href="https://www.lumise.com/help-center">Help Center</a></li>
-                <li><a href="https://www.lumise.com/features">Features</a></li>
-                <li><a href="https://www.lumise.com/pricing">Pricing</a></li>
+                <li><a href="#">Sobre Nosotros</a></li>
+                <li><a href="#">Centro de ayuda</a></li>
+                <li><a href="#">Caracteristicas</a></li>
+                <li><a href="#">Precio</a></li>
             </ul>
         </div>
         <div class="footer_content">
-            <h4>More</h4>
+            <h4>Mas</h4>
             <ul class="link">
-                <li><a href="https://blog.lumise.com/">Blog</a></li>
-                <li><a href="https://www.lumise.com/faqs">FAQs</a></li>
-                <li><a href="#">Testimonial</a></li>
-                <li><a href="https://www.lumise.com/contact">Contact</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Preguntas frecuentes</a></li>
+                <li><a href="#">Testimonio</a></li>
+                <li><a href="#">Contacto</a></li>
             </ul>
         </div>
         <div class="footer_content">
-            <h4>Newsletter</h4>
-            <p>Sign up our newsletter to receive updates from our store, promotions, and events.</p>
+            <h4>Boletin informativo</h4>
+            <p>Regístrese en nuestro boletín para recibir actualizaciones de nuestra tienda, promociones y eventos.</p>
             <form action="" class="form-sub">
-                <input type="text" placeholder="Email address here">
-                <input type="submit" value="Send">
+                <input type="text" placeholder="Ingresa tu correo aquí">
+                <input type="submit" value="Enviar">
             </form>
         </div>
     </div>
     <div class="container">
         <div class="copyright">
-            <p>Copyright © 2017 <a href="http://king-theme.com" target="_blank">King-Theme.com</a> | <a href="https://www.lumise.com/privacy">Privacy &amp; policy</a><a href="https://www.lumise.com/terms">Term of services</a></p>
+            <p>Copyright © 2019 <a href="#" target="_blank">AriWara.com</a> | Personaliza tu Producto</p>
         </div>
     </div>
 </footer>
