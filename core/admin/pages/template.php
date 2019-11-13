@@ -8,23 +8,23 @@
 		array(
 			'type' => 'input',
 			'name' => 'name',
-			'label' => $lumise->lang('Name'),
+			'label' => $lumise->lang('Nombre'),
 			'required' => true,
-			'default' => 'Untitled'
+			'default' => 'Pantilla 1'
 		),
 		array(
 			'type' => 'input',
 			'name' => 'price',
-			'label' => $lumise->lang('Price'),
+			'label' => $lumise->lang('Precio'),
 			'default' => 0,
 			'numberic' => 'float',
-			'desc' => $lumise->lang('Enter price for this template.')
+			'desc' => $lumise->lang('Ingrese precio para esta plantilla.')
 		),
 		array(
 			'type' => 'categories',
 			'cate_type' => 'templates',
 			'name' => 'categories',
-			'label' => $lumise->lang('Categories'),
+			'label' => $lumise->lang('Categorias'),
 			'id' => $id,
 			'db' => false
 		),
@@ -32,10 +32,10 @@
 			'type' => 'tags',
 			'tag_type' => 'templates',
 			'name' => 'tags',
-			'label' => $lumise->lang('Tags'),
+			'label' => $lumise->lang('Etiquetas'),
 			'id' => $id,
 			'db' => false,
-			'desc' => $lumise->lang('Example: tag1, tag2, tag3 ...'),
+			'desc' => $lumise->lang('Ejemplo: Carros, Gatos, Perro ...'),
 		),
 		array(
 			'type' => 'upload',
@@ -43,20 +43,21 @@
 			'name' => 'upload',
 			'path' => 'templates'.DS.date('Y').DS.date('m').DS,
 			'thumbn' => 'screenshot',
-			'label' => $lumise->lang('Upload template file'),
-			'desc' => $lumise->lang('Upload the exported file *.lumi from the Lumise Designer Tool. You can download the LUMI file via menu "File" > Save As File, or press Ctrl+Shift+S')
+			'label' => $lumise->lang('Subir Imagen de plantilla'),
+			'desc' => $lumise->lang('Cargue el archivo exportado ')
+			/**.lumi from the Lumise Designer Tool. You can download the LUMI file via menu "File" > Save As File, or press Ctrl+Shift+S*/
 		),
 		array(
 			'type' => 'toggle',
 			'name' => 'featured',
-			'label' => $lumise->lang('Featured'),
+			'label' => $lumise->lang('Destacados'),
 			'default' => 'no',
 			'value' => null
 		),
 		array(
 			'type' => 'toggle',
 			'name' => 'active',
-			'label' => $lumise->lang('Active'),
+			'label' => $lumise->lang('Activo'),
 			'default' => 'yes',
 			'value' => null
 		),
@@ -64,9 +65,9 @@
 			'type' => 'input',
 			'name' => 'order',
 			'type_input' => 'number',
-			'label' => $lumise->lang('Order'),
+			'label' => $lumise->lang('Ordenes'),
 			'default' => 0,
-			'desc' => $lumise->lang('Ordering of item with other.')
+			'desc' => $lumise->lang('Pedido de artículo con otro.')
 		),
 	), 'templates');
 

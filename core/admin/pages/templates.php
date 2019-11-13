@@ -217,10 +217,10 @@
 	<div class="lumise_content">
 
 		<div class="lumise_header">
-			<h2><?php echo $lumise->lang('Design templates'); ?></h2>
+			<h2><?php echo $lumise->lang('Diseño de plantillas'); ?></h2>
 			<a href="<?php echo $lumise_router->getURI();?>lumise-page=template" class="add_new">
 				<i class="fa fa-plus"></i> 
-				<?php echo $lumise->lang('Add new template'); ?></a>
+				<?php echo $lumise->lang('Añadir nueva plantilla'); ?></a>
 			<?php
 				$lumise_page = isset($_GET['lumise-page']) ? $_GET['lumise-page'] : '';
 				echo $lumise_helper->breadcrumb($lumise_page);
@@ -231,18 +231,18 @@
 				<div class="left">
 					<form action="<?php echo $lumise_router->getURI();?>lumise-page=templates" method="post">
 						<select name="action" class="art_per_page">
-							<option value="none"><?php echo $lumise->lang('Bulk Actions'); ?></option>
-							<option value="active"><?php echo $lumise->lang('Active'); ?></option>
-							<option value="deactive"><?php echo $lumise->lang('Deactive'); ?></option>
-							<option value="delete"><?php echo $lumise->lang('Delete'); ?></option>
+							<option value="none"><?php echo $lumise->lang('Acciones masivas'); ?></option>
+							<option value="active"><?php echo $lumise->lang('Activo'); ?></option>
+							<option value="deactive"><?php echo $lumise->lang('Inactivo'); ?></option>
+							<option value="delete"><?php echo $lumise->lang('Borrado'); ?></option>
 						</select>
 						<input type="hidden" name="id_action" class="id_action">
-						<input  class="lumise_submit" type="submit" name="action_submit" value="<?php echo $lumise->lang('Apply'); ?>">
+						<input  class="lumise_submit" type="submit" name="action_submit" value="<?php echo $lumise->lang('Aplicar'); ?>">
 						<?php $lumise->securityFrom();?>
 					</form>
 					<form action="<?php echo $lumise_router->getURI();?>lumise-page=templates" method="post" class="less">
 						<select name="per_page" data-action="submit" class="art_per_page">
-							<option value="none">-- <?php echo $lumise->lang('Per page'); ?> --</option>
+							<option value="none">-- <?php echo $lumise->lang('Por pagina'); ?> --</option>
 							<?php
 								$per_pages = array('20', '50', '100', '200');
 
@@ -261,20 +261,20 @@
 					</form>
 					<form action="<?php echo $lumise_router->getURI();?>lumise-page=templates" method="post" class="less">
 						<select name="sort" data-action="submit" class="art_per_page">
-							<option value="created_desc">-- <?php echo $lumise->lang('Sort by'); ?> --</option>
-							<option value="featured" <?php if ($dt_order == 'featured' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Featured only'); ?> </option>
-							<option value="active" <?php if ($dt_order == 'active' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Active only'); ?> </option>
-							<option value="deactive" <?php if ($dt_order == 'deactive' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Deactive only'); ?> </option>
-							<option value="name_asc" <?php if ($dt_order == 'name_asc' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Name'); ?> A->Z</option>
-							<option value="name_desc" <?php if ($dt_order == 'name_desc' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Name'); ?> Z->A</option>
-							<option value="created_asc" <?php if ($dt_order == 'created_asc' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Created date'); ?> &uarr;</option>
-							<option value="created_desc" <?php if ($dt_order == 'created_desc' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Created date'); ?> &darr;</option>
+							<option value="created_desc">-- <?php echo $lumise->lang('Ordenar por'); ?> --</option>
+							<option value="featured" <?php if ($dt_order == 'featured' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Solo entregado'); ?> </option>
+							<option value="active" <?php if ($dt_order == 'active' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Solo activos'); ?> </option>
+							<option value="deactive" <?php if ($dt_order == 'deactive' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Solo inactivos'); ?> </option>
+							<option value="name_asc" <?php if ($dt_order == 'name_asc' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Nombre'); ?> A->Z</option>
+							<option value="name_desc" <?php if ($dt_order == 'name_desc' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Nombre'); ?> Z->A</option>
+							<option value="created_asc" <?php if ($dt_order == 'created_asc' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Fecha de creacion'); ?> &uarr;</option>
+							<option value="created_desc" <?php if ($dt_order == 'created_desc' ) echo 'selected' ; ?> ><?php echo $lumise->lang('Fecha de creacion'); ?> &darr;</option>
 						</select>
 						<?php $lumise->securityFrom();?>
 					</form>
 					<form action="<?php echo $lumise_router->getURI();?>lumise-page=templates" method="post" class="less">
 						<select name="categories" class="art_per_page" data-action="submit" style="width:150px">
-							<option value="">-- <?php echo $lumise->lang('Categories'); ?> --</option>
+							<option value="">-- <?php echo $lumise->lang('Categorias'); ?> --</option>
 							<?php
 								$cates = $lumise_admin->get_categories('templates');
 								foreach ($cates as $cate) {
@@ -293,8 +293,8 @@
 				</div>
 				<div class="right">
 					<form action="<?php echo $lumise_router->getURI();?>lumise-page=templates" method="post">
-						<input type="search" name="search" class="search" placeholder="<?php echo $lumise->lang('Search ...'); ?>" value="<?php if(isset($_SESSION[$prefix.'data_search'])) echo $_SESSION[$prefix.'data_search']; ?>">
-						<input  class="lumise_submit" type="submit" name="search_template" value="<?php echo $lumise->lang('Search'); ?>">
+						<input type="search" name="search" class="search" placeholder="<?php echo $lumise->lang('Buscar ...'); ?>" value="<?php if(isset($_SESSION[$prefix.'data_search'])) echo $_SESSION[$prefix.'data_search']; ?>">
+						<input  class="lumise_submit" type="submit" name="search_template" value="<?php echo $lumise->lang('Buscar'); ?>">
 						<?php $lumise->securityFrom();?>
 
 					</form>
@@ -405,7 +405,7 @@
 						$_SESSION[$prefix.'data_search'] = '';
 						echo '<a href="'.$lumise_router->getURI().'lumise-page=templates" class="btn-back"><i class="fa fa-reply" aria-hidden="true"></i>'.$lumise->lang('Back To Lists').'</a>';
 					}
-					else echo '<p class="no-data">'.$lumise->lang('No data. Please add template.').'</p>';
+					else echo '<p class="no-data">'.$lumise->lang('No se encuentra datos, Por favor agregue una plantilla').'</p>';
 			}?>
 
 	</div>

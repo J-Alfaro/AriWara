@@ -8,14 +8,14 @@
 		array(
 			'type' => 'input',
 			'name' => 'name',
-			'label' => $lumise->lang('Name'),
+			'label' => $lumise->lang('Nombre'),
 			'required' => true
 		),
 		array(
 			'type' => 'parent',
 			'cate_type' => $type,
 			'name' => 'parent',
-			'label' => $lumise->lang('Parent'),
+			'label' => $lumise->lang('Madre'),
 			'id' => isset($_GET['id'])? $_GET['id'] : 0
 		),
 		array(
@@ -23,21 +23,21 @@
 			'name' => 'upload',
 			'path' => 'thumbnails'.DS,
 			'thumbn' => 'thumbnail_url',
-			'label' => $lumise->lang('Thumbnail'),
-			'desc' => $lumise->lang('Supported files svg, png, jpg, jpeg. Max size 5MB')
+			'label' => $lumise->lang('Miniatura'),
+			'desc' => $lumise->lang('Archivos soportados svg, png, jpg, jpeg. Tamaño máximo 5 MB')
 		),
 		array(
 			'type' => 'input',
 			'name' => 'order',
 			'type_input' => 'number',
-			'label' => $lumise->lang('Order'),
+			'label' => $lumise->lang('Orden'),
 			'default' => 0,
-			'desc' => $lumise->lang('Ordering of item with other.')
+			'desc' => $lumise->lang('Pedido de artículo con otro.')
 		),
 		array(
 			'type' => 'toggle',
 			'name' => 'active',
-			'label' => $lumise->lang('Active'),
+			'label' => $lumise->lang('Activo'),
 			'default' => 'yes',
 			'value' => null
 		),
