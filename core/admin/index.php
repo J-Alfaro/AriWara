@@ -45,39 +45,39 @@ class lumise_router {
 						'link'   => $this->getURI().'lumise-page=dashboard',
 					),
 					'updates' => array(
-						'title' => $lumise->lang('Updates').(!empty($this->check_update) && isset($this->check_update->version) && version_compare(LUMISE, $this->check_update->version, '<') ? ' <span class="update-notice">1</span>' : ''),
+						'title' => $lumise->lang('Actualizaciones').(!empty($this->check_update) && isset($this->check_update->version) && version_compare(LUMISE, $this->check_update->version, '<') ? ' <span class="update-notice">1</span>' : ''),
 						'link'   => $this->getURI().'lumise-page=updates',
 					),
 					'license' => array(
-						'title' => $lumise->lang('License'),
+						'title' => $lumise->lang('Licencia'),
 						'link'   => $this->getURI().'lumise-page=license',
 					),
 					'system' => array(
-						'title' => $lumise->lang('Status'),
+						'title' => $lumise->lang('Estado'),
 						'link'   => $this->getURI().'lumise-page=system',
 					)
 				),
 				'capability' => 'lumise_read_dashboard'
 			),
 			'products' => array(
-				'title' => $lumise->lang('Products Base'),
+				'title' => $lumise->lang('Productos'),
 				'icon'  => '<i class="fa fa-cube"></i>',
 				'child' => array(
 					'products'   => array(
 						'type'   => '',
-						'title'  => $lumise->lang('All Products Base'),
+						'title'  => $lumise->lang('Todos los productos'),
 						'link'   => $this->getURI().'lumise-page=products',
 						'hidden' => false,
 					),
 					'product' => array(
 						'type'   => '',
-						'title'  => $lumise->lang('Add New Product Base'),
+						'title'  => $lumise->lang('Agregar nuevo producto'),
 						'link'   => $this->getURI().'lumise-page=product',
 						'hidden' => false,
 					),
 					'categories' => array(
 						'type'   => 'products',
-						'title'  => $lumise->lang('Product Categories'),
+						'title'  => $lumise->lang('Categorias'),
 						'link'   => $this->getURI().'lumise-page=categories&type=products',
 						'hidden' => false,
 					),
@@ -91,36 +91,36 @@ class lumise_router {
 				'capability' => 'lumise_read_products'
 			),
 			'templates' => array(
-				'title' => $lumise->lang('Design Templates'),
+				'title' => $lumise->lang('Plantillas'),
 				'icon'  => '<i class="fa fa-paper-plane-o"></i>',
 				'child' => array(
 					'templates'   => array(
 						'type'   => '',
-						'title'  => $lumise->lang('All Templates'),
+						'title'  => $lumise->lang('Todas las plantillas'),
 						'link'   => $this->getURI().'lumise-page=templates',
 						'hidden' => false,
 					),
 					'template' => array(
 						'type'   => '',
-						'title'  => $lumise->lang('Add New Template'),
+						'title'  => $lumise->lang('Agregar nueva plantilla'),
 						'link'   => $this->getURI().'lumise-page=template',
 						'hidden' => false,
 					),
 					'categories' => array(
 						'type'   => 'templates',
-						'title'  => $lumise->lang('Categories'),
+						'title'  => $lumise->lang('Categorias'),
 						'link'   => $this->getURI().'lumise-page=categories&type=templates',
 						'hidden' => false,
 					),
 					'category' => array(
 						'type'   => 'templates',
-						'title'  => $lumise->lang('Add New Category'),
+						'title'  => $lumise->lang('Añadir nueva categoria'),
 						'link'   => $this->getURI().'lumise-page=category&type=templates',
 						'hidden' => true,
 					),
 					'tags' => array(
 						'type'   => 'templates',
-						'title'  => $lumise->lang('Tags'),
+						'title'  => $lumise->lang('Etiquetas'),
 						'link'   => $this->getURI().'lumise-page=tags&type=templates',
 						'hidden' => false,
 					),
