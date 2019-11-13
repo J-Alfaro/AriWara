@@ -126,7 +126,7 @@ class lumise_router {
 					),
 					'tag' => array(
 						'type'   => 'templates',
-						'title'  => $lumise->lang('Add New Tag'),
+						'title'  => $lumise->lang('Añadir nueva etiqueta'),
 						'link'   => $this->getURI().'lumise-page=tag&type=templates',
 						'hidden' => true,
 					),
@@ -134,24 +134,24 @@ class lumise_router {
 				'capability' => 'lumise_read_templates'
 			),
 			'cliparts' => array(
-				'title' => $lumise->lang('Cliparts'),
+				'title' => $lumise->lang('Imagenes'),
 				'icon'  => '<i class="fa fa-file-image-o"></i>',
 				'child' => array(
 					'cliparts'   => array(
 						'type'   => '',
-						'title'  => $lumise->lang('All Cliparts'),
+						'title'  => $lumise->lang('Todas las imagenes'),
 						'link'   => $this->getURI().'lumise-page=cliparts',
 						'hidden' => false,
 					),
 					'clipart' => array(
 						'type'   => '',
-						'title'  => $lumise->lang('Add New Clipart'),
+						'title'  => $lumise->lang('Agregar nueva imagen '),
 						'link'   => $this->getURI().'lumise-page=clipart',
 						'hidden' => false,
 					),
 					'categories' => array(
 						'type'   => 'cliparts',
-						'title'  => $lumise->lang('Categories'),
+						'title'  => $lumise->lang('Categorias'),
 						'link'   => $this->getURI().'lumise-page=categories&type=cliparts',
 						'hidden' => false,
 					),
@@ -163,13 +163,13 @@ class lumise_router {
 					),
 					'tags' => array(
 						'type'   => 'cliparts',
-						'title'  => $lumise->lang('Tags'),
+						'title'  => $lumise->lang('Etiquetas'),
 						'link'   => $this->getURI().'lumise-page=tags&type=cliparts',
 						'hidden' => false,
 					),
 					'tag' => array(
 						'type'   => 'cliparts',
-						'title'  => $lumise->lang('Add New Tag'),
+						'title'  => $lumise->lang('Añadir nueva etiqueta'),
 						'link'   => $this->getURI().'lumise-page=tag&type=cliparts',
 						'hidden' => true,
 					),
@@ -177,18 +177,18 @@ class lumise_router {
 				'capability' => 'lumise_read_cliparts'
 			),
 			'shapes' => array(
-				'title' => $lumise->lang('Shapes'),
+				'title' => $lumise->lang('Formas'),
 				'icon'  => '<i class="fa fa-cube"></i>',
 				'child' => array(
 					'shapes'   => array(
 						'type'   => '',
-						'title'  => $lumise->lang('All shapes'),
+						'title'  => $lumise->lang('Todas las formas'),
 						'link'   => $this->getURI().'lumise-page=shapes',
 						'hidden' => false,
 					),
 					'shape' => array(
 						'type'   => '',
-						'title'  => $lumise->lang('Add New Shape'),
+						'title'  => $lumise->lang('Añadir nueva forma'),
 						'link'   => $this->getURI().'lumise-page=shape',
 						'hidden' => false,
 					),
@@ -255,19 +255,19 @@ class lumise_router {
 				'capability' => 'lumise_read_languages'
 			),*/
 			'orders' => array(
-				'title' => $lumise->lang('Orders'),
+				'title' => $lumise->lang('Ordenes'),
 				'icon'  => '<i class="fa fa-shopping-bag"></i>',
 				'link'   => $this->getURI().'lumise-page=orders',
 				'child' => array(
 					'orders'   => array(
 						'type'   => '',
-						'title'  => $lumise->lang('All Orders'),
+						'title'  => $lumise->lang('Todas las ordenes'),
 						'link'   => $this->getURI().'lumise-page=orders',
 						'hidden' => false,
 					),
 					'order'   => array(
 						'type'   => '',
-						'title'  => $lumise->lang('Order'),
+						'title'  => $lumise->lang('Orden'),
 						'link'   => $this->getURI().'lumise-page=order',
 						'hidden' => true,
 					)
@@ -413,7 +413,7 @@ class lumise_router {
 				<div class="lumise-update-notice top">
 					<a href="https://www.lumise.com/changelogs/<?php echo $lumise->connector->platform; ?>?utm_source=client-site&utm_medium=text&utm_campaign=update-page&utm_term=links&utm_content=<?php echo $lumise->connector->platform; ?>" target=_blank>Lumise <?php echo $this->check_update->version; ?></a> 
 					<?php echo $lumise->lang('is available'); ?>! 
-					<a href="<?php echo $lumise->cfg->admin_url; ?>lumise-page=updates"><?php echo $lumise->lang('Please update now'); ?></a>.
+					<a href="<?php echo $lumise->cfg->admin_url; ?>lumise-page=updates"><?php echo $lumise->lang('Por favor actualize ahora'); ?></a>.
 				</div>
 			</div>
 		</div>
