@@ -557,12 +557,12 @@ class lumise_cfg extends lumise_tmpl_register{
 		);
 		
 	    $this->js_lang = array(
-		    'sure'=> $lumise->lang('Are you sure?'),
-			'save'=> $lumise->lang('Save'),
-			'edit'=> $lumise->lang('Edit'),
-			'remove'=> $lumise->lang('Remove'),
-			'delete'=> $lumise->lang('Delete'),
-			'cancel'=> $lumise->lang('Cancel'),
+		    'sure'=> $lumise->lang('Estas seguro?'),
+			'save'=> $lumise->lang('Guardar'),
+			'edit'=> $lumise->lang('Editar'),
+			'remove'=> $lumise->lang('Eliminar'),
+			'delete'=> $lumise->lang('Eliminar'),
+			'cancel'=> $lumise->lang('Cancelar'),
 			'reset'=> $lumise->lang('Reset'),
 			'stage'=> $lumise->lang('Stage'),
 			'front'=> $lumise->lang('Front'),

@@ -69,10 +69,10 @@
 			<?php $lumise->views->tabs_render($fields); ?>
 
 			<div class="lumise_form_group lumise_form_submit">
-				<input type="submit" value="<?php echo $lumise->lang('Save Category'); ?>"/>
+				<input type="submit" value="<?php echo $lumise->lang('Guardar categoria'); ?>"/>
 				<input type="hidden" name="do" value="action" />
 				<a class="lumise_cancel" href="<?php echo $lumise_router->getURI();?>lumise-page=categories&type=<?php echo $type; ?>">
-					<?php echo $lumise->lang('Cancel'); ?>
+					<?php echo $lumise->lang('Cancelar'); ?>
 				</a>
 				<input type="hidden" name="lumise-section" value="<?php echo $section; ?>">
 			</div>

@@ -1820,9 +1820,9 @@ class lumise_views extends lumise_lib {
 				<?php echo $this->main->lang('Add Category'); ?>
 			</a>
 		<?php } else { ?>
-			<p class="no-data"><?php echo $this->main->lang('You have not created any category yet'); ?>. </p>
+			<p class="no-data"><?php echo $this->main->lang('Aún no has creado ninguna categoría'); ?>. </p>
 			<a href="<?php echo $lumise_router->getURI();?>lumise-page=category&type=<?php echo $args['cate_type']; ?>" target=_blank  class="add-new">
-				<?php echo $this->main->lang('Create new category'); ?>
+				<?php echo $this->main->lang('Crear nueva categoria'); ?>
 			</a>
 		<?php }
     }
@@ -2161,7 +2161,7 @@ class lumise_views extends lumise_lib {
 				<?php } ?>
 			
 				<label for="lumise-<?php echo $attr['name']; ?>-file-upload">
-					<i class="fa fa-cloud-upload"></i> <?php echo $this->main->lang('Choose a file'); ?>
+					<i class="fa fa-cloud-upload"></i> <?php echo $this->main->lang('Escoge un archivo'); ?>
 				</label>
 				<button data-btn="true" data-file-delete="true"  data-file-preview="#lumise-<?php
 					echo $attr['name'];
@@ -2240,7 +2240,7 @@ class lumise_views extends lumise_lib {
 			<?php } ?>
 
 			<label for="<?php echo $attr['name']; ?>_file_upload">
-				<?php echo isset($attr['button_text']) ? $attr['button_text'] : $this->main->lang('Choose a file'); ?>
+				<?php echo isset($attr['button_text']) ? $attr['button_text'] : $this->main->lang('Escoge un archivo'); ?>
 			</label>
 			<button data-btn="true" data-file-delete="true"  data-file-preview="#lumise-<?php
 				echo $attr['name'];
@@ -2249,7 +2249,7 @@ class lumise_views extends lumise_lib {
 			?>-input" data-file-thumbn="#lumise-<?php
 				echo $attr['name'];
 			?>-thumbn">
-				<?php echo $this->main->lang('Remove file'); ?>
+				<?php echo $this->main->lang('Eliminar archivo'); ?>
 			</button>
 		</div>
 
