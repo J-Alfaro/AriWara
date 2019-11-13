@@ -25,19 +25,20 @@ include(theme('header.php'));
 
 ?>
         <div class="lumise-hero">
+            <h1>hola prueba</h1>
             <div class="owl-carousel owl-theme">
                 <div class="item" style="background:url('<?php echo theme('assets/images/hero2.jpg', true); ?>') no-repeat;background-size:cover;">
                     <div class="container">
-                        <h1><?php echo $lumise->lang('New collecttion 2018'); ?></h1>
-                        <h4><?php echo $lumise->lang('Sale up to 50%  all product in the new collection'); ?></h4>
-                        <a href="<?php echo $lumise->cfg->url.'products.php'; ?>"><?php echo $lumise->lang('View Collection'); ?></a>
+                        <h1><?php echo $lumise->lang('Nueva Colección 2019'); ?></h1>
+                        <h4><?php echo $lumise->lang('Venta de hasta el 50% de todos los productos de la nueva colección'); ?></h4>
+                        <a href="<?php echo $lumise->cfg->url.'products.php'; ?>"><?php echo $lumise->lang('Ver Colección'); ?></a>
                     </div>
                 </div>
                 <div class="item" style="background:url('<?php echo theme('assets/images/hero1.jpg', true); ?>')no-repeat;background-size:cover;">
                     <div class="container">
-                        <h1><?php echo $lumise->lang('SALE OFF! UP TO 70%'); ?></h1>
-                        <h4><?php echo $lumise->lang('Duis aute irure dolor in reprehenderit in voluptate velit'); ?></h4>
-                        <a href="<?php echo $lumise->cfg->url.'products.php'; ?>"><?php echo $lumise->lang('View Collection'); ?></a>
+                        <h1><?php echo $lumise->lang('Descuentos solo hoy!'); ?></h1>
+                        <h4><?php echo $lumise->lang('Aprovecha! 70% de descuentos para adquerir un producto personalizado'); ?></h4>
+                        <a href="<?php echo $lumise->cfg->url.'products.php'; ?>"><?php echo $lumise->lang('Ver Colección'); ?></a>
                     </div>
                 </div>
             </div>
@@ -49,8 +50,8 @@ include(theme('header.php'));
                         <div class="box-info">
                             <i class="fa fa-truck" aria-hidden="true"></i>
                             <div class="content">
-                                <h4><?php echo $lumise->lang('Free Shipping'); ?></h4>
-                                <p><?php echo $lumise->lang('On all order over $250'); ?></p>
+                                <h4><?php echo $lumise->lang('Envío gratis'); ?></h4>
+                                <p><?php echo $lumise->lang('En todo los pedidos superiores a S/. 100.00 Nuevos Soles'); ?></p>
                             </div>
                         </div>
                     </div>
@@ -58,8 +59,8 @@ include(theme('header.php'));
                         <div class="box-info">
                             <i class="fa fa-refresh" aria-hidden="true"></i>
                             <div class="content">
-                                <h4><?php echo $lumise->lang('Money Guarantee'); ?></h4>
-                                <p><?php echo $lumise->lang('30 day money back'); ?></p>
+                                <h4><?php echo $lumise->lang('Garantía de dinero'); ?></h4>
+                                <p><?php echo $lumise->lang('30 días de devolución de dinero'); ?></p>
                             </div>
                         </div>
                     </div>
@@ -67,8 +68,8 @@ include(theme('header.php'));
                         <div class="box-info">
                             <i class="fa fa-credit-card" aria-hidden="true"></i>
                             <div class="content">
-                                <h4><?php echo $lumise->lang('Payment Secured'); ?></h4>
-                                <p><?php echo $lumise->lang('Secure all your payments'); ?></p>
+                                <h4><?php echo $lumise->lang('Pago asegurado'); ?></h4>
+                                <p><?php echo $lumise->lang('Asegure todo sus pagos'); ?></p>
                             </div>
                         </div>
                     </div>
@@ -76,8 +77,8 @@ include(theme('header.php'));
                         <div class="box-info">
                             <i class="fa fa-life-ring" aria-hidden="true"></i>
                             <div class="content">
-                                <h4><?php echo $lumise->lang('Power Support'); ?></h4>
-                                <p><?php echo $lumise->lang('Online Support 24/7'); ?></p>
+                                <h4><?php echo $lumise->lang('Soporte de energía'); ?></h4>
+                                <p><?php echo $lumise->lang('Soporte en línea 24/7'); ?></p>
                             </div>
                         </div>
                     </div>
@@ -87,7 +88,7 @@ include(theme('header.php'));
         <?php LumiseView::categories(); ?> 
         <div class="lumise-list">
             <div class="container">
-                <h2><?php echo $lumise->lang('Featured product'); ?></h2>
+                <h2><?php echo $lumise->lang('Productos destacados'); ?></h2>
                 <?php LumiseView::products($data['rows']); ?>
             </div>
         </div>
