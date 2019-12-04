@@ -12,12 +12,12 @@ $fields = array(
     array('country', 'Country')
 );
 
-$page_title = $lumise->lang('Checkout');
+$page_title = $lumise->lang('Pagar');
 include(theme('header.php'));
 ?>
         <div class="lumise-bread">
             <div class="container">
-                <h1><?php echo $lumise->lang('Checkout'); ?></h1>
+                <h1><?php echo $lumise->lang('Pagar'); ?></h1>
             </div>
         </div>
         <form action="<?php echo $lumise->cfg->url;?>process_checkout.php" method="post" class="form-horizontal" id="checkoutform" accept-charset="utf-8">
@@ -26,48 +26,48 @@ include(theme('header.php'));
             	<div id="checkout" class="padding6 span12">
                     <?php if(count($items) > 0):?>
                         <div class="col-md-6 billing">
-                            <h3><?php echo $lumise->lang('Billing Information'); ?></h3>
+                            <h3><?php echo $lumise->lang('Datos de Facturacion'); ?></h3>
                             <div class="control-group span6">
-                				<label for="first_name" class="control-label"><?php echo $lumise->lang('First Name'); ?><em>*</em></label>
+                				<label for="first_name" class="control-label"><?php echo $lumise->lang('Nombres'); ?><em>*</em></label>
                 				<div class="controls">
                 					<input name="first_name" type="text" value="" placeholder="Katie" id="first_name" required>
                 				</div>
                 			</div>
                             <div class="control-group span6 last">
-                				<label for="last_name" class="control-label"><?php echo $lumise->lang('Last Name'); ?><em>*</em></label>
+                				<label for="last_name" class="control-label"><?php echo $lumise->lang('Apellidos'); ?><em>*</em></label>
                 				<div class="controls">
-                					<input name="last_name" type="text" placeholder="King" value="" id="last_name" required>
+                					<input name="last_name" type="text" placeholder="Perez" value="" id="last_name" required>
                 				</div>
                 			</div>
                             <div class="control-group">
-                				<label for="email" class="control-label"><?php echo $lumise->lang('Billing E-Mail'); ?><em>*</em></label>
+                				<label for="email" class="control-label"><?php echo $lumise->lang('Correo'); ?><em>*</em></label>
                 				<div class="controls">
                 					<input name="email" type="email" value="" id="email" required>
                 				</div>
                 			</div>
                 			<div class="control-group">
-                				<label for="address" class="control-label"><?php echo $lumise->lang('Street Address'); ?><em>*</em></label>
+                				<label for="address" class="control-label"><?php echo $lumise->lang('Direccion'); ?><em>*</em></label>
                 				<div class="controls">
-                                    <input name="address" placeholder="229 Broadway" type="text" value="" id="address" required>
+                                    <input name="address" placeholder="Capanique" type="text" value="" id="address" required>
                 				</div>
                 			</div>
                 			<div class="control-group span6">
-                				<label for="zip" class="control-label"><?php echo $lumise->lang('Zip Code'); ?><em>*</em></label>
+                				<label for="zip" class="control-label"><?php echo $lumise->lang('Codigo postal'); ?><em>*</em></label>
                 				<div class="controls">
                                     <input name="zip" type="text" value="" id="zip" required>
                 				</div>
                 			</div>
                 			<div class="control-group span6 last">
-                				<label for="city" class="control-label"><?php echo $lumise->lang('City'); ?><em>*</em></label>
+                				<label for="city" class="control-label"><?php echo $lumise->lang('Ciudad'); ?><em>*</em></label>
                 				<div class="controls">
-                                    <input name="city" type="text" placeholder="New York" value="" id="city" required>
+                                    <input name="city" type="text" placeholder="Tacna" value="" id="city" required>
                 				</div>
                 			</div>
                 			<div class="control-group span6">
-                				<label for="country" class="control-label"><?php echo $lumise->lang('Country'); ?><em>*</em></label>
+                				<label for="country" class="control-label"><?php echo $lumise->lang('Pais'); ?><em>*</em></label>
                 				<div class="controls">
                 					<select name="country" id="country" required>
-                						<option value=""><?php echo $lumise->lang('Country'); ?></option>
+                						<option value=""><?php echo $lumise->lang('Pais'); ?></option>
                 						<option value="AR">Argentina</option>
                 						<option value="AU">Australia</option>
                 						<option value="AT">Austria</option>
@@ -163,7 +163,7 @@ include(theme('header.php'));
                 				</div>
                 			</div>
                             <div class="control-group span6 last">
-                				<label for="phone" class="control-label"><?php echo $lumise->lang('Phone'); ?><em>*</em></label>
+                				<label for="phone" class="control-label"><?php echo $lumise->lang('Telefono'); ?><em>*</em></label>
                 				<div class="controls">
                                     <input name="phone" type="text" value="" id="phone" required>
                 				</div>
@@ -173,7 +173,7 @@ include(theme('header.php'));
                 				<div class="controls">
                                     <div class="lumise-payment-item">
                                         <input name="payment" type="radio" value="cod" id="payment-cod" required>
-                                        <label for="payment-cod"><?php echo $lumise->lang('Cash on delivery'); ?></label>
+                                        <label for="payment-cod"><?php echo $lumise->lang('Reembolso'); ?></label>
                                     </div>
                                     <div class="lumise-payment-item">
                                         <input name="payment" type="radio" value="paypal" id="payment-paypal" required>
@@ -184,15 +184,15 @@ include(theme('header.php'));
                 			</div>
                         </div>
                         <div class="col-md-6 order_overview">
-                            <h3>Order Review</h3>
+                            <h3>Pedido</h3>
                             <div class="wrap-table">
                                 <table class="lumise-table sty2">
                                     <thead>
                                         <tr>
-                                            <th><?php echo $lumise->lang('Product Name'); ?></th>
-                                            <th><?php echo $lumise->lang('Thumbnails'); ?></th>
-                                            <th><?php echo $lumise->lang('Attributes'); ?></th>
-                                            <th><?php echo $lumise->lang('Qty'); ?></th>
+                                            <th><?php echo $lumise->lang('Nombre Producto'); ?></th>
+                                            <th><?php echo $lumise->lang('Diseño'); ?></th>
+                                            <th><?php echo $lumise->lang('Atributos'); ?></th>
+                                            <th><?php echo $lumise->lang('Cantidad'); ?></th>
                                             <th class="text-right"><?php echo $lumise->lang('Subtotal'); ?></th>
                                         </tr>
                                     </thead>
@@ -252,21 +252,21 @@ include(theme('header.php'));
                                             <td class="text-right"><?php echo $lumise->lib->price($total);?></td>
                                         </tr>
                                         <tr>
-                                            <td colspan="4" class="text-right"><strong><?php echo $lumise->lang('Grand Total'); ?></strong></td>
+                                            <td colspan="4" class="text-right"><strong><?php echo $lumise->lang('Total'); ?></strong></td>
                                             <td class="text-right"><?php $grand_total = $total;?><?php echo $lumise->lib->price($grand_total);?></td>
                                         </tr>
                                     </tfoot>
                                 </table>
                             </div>
                             <div class="control-group span12 comment">
-                				<label for="comment" class="control-label"><?php echo $lumise->lang('Comments'); ?></label>
+                				<label for="comment" class="control-label"><?php echo $lumise->lang('Comentarios'); ?></label>
                 				<div class="controls">
                                     <textarea name="comment" type="text" value="" id="comment"></textarea>
                 				</div>
                 			</div>
                             <input type="hidden" name="action" value="placeorder">
                             <div class="form-actions">
-                				<button name="submit" type="submit" class="btn btn-large btn-primary"><?php echo $lumise->lang('Place Order'); ?></button>
+                				<button name="submit" type="submit" class="btn btn-large btn-primary"><?php echo $lumise->lang('Realizar pedido'); ?></button>
                 			</div>
                         </div>
                         
@@ -275,7 +275,7 @@ include(theme('header.php'));
                             <p><?php echo $lumise->lang('Your cart is currently empty.'); ?></p>
                         </div>
                         <div class="form-actions">
-                            <a href="<?php echo $lumise->cfg->url;?>" class="btn btn-large btn-primary"><?php echo $lumise->lang('Continue Shopping'); ?></a>
+                            <a href="<?php echo $lumise->cfg->url;?>" class="btn btn-large btn-primary"><?php echo $lumise->lang('Continuar comprando'); ?></a>
                         </div>
                     <?php endif;?>
             	</div>

@@ -19,7 +19,7 @@ include(theme('header.php'));
 ?>
         <div class="lumise-bread">
             <div class="container">
-                <h1><?php echo $lumise->lang('Shopping Cart'); ?></h1>
+                <h1><?php echo $lumise->lang('Carrito de compras'); ?></h1>
             </div>
         </div>
         <div class="container">
@@ -118,17 +118,17 @@ include(theme('header.php'));
 
             			<div class="form-actions align-right">
             				<a href="<?php echo $lumise->cfg->url;?>checkout.php" class="btn btn-large btn-primary">
-	            				<?php echo $lumise->lang('Proceed To Checkout'); ?>
+	            				<?php echo $lumise->lang('Pasar por la caja'); ?>
 	            			</a>
             			</div>
                 	</div> <!-- .span8 -->
                 <?php else:?>
                     <div class="span12">
-                        <p><?php echo $lumise->lang('Your cart is currently empty.'); ?></p>
+                        <p><?php echo $lumise->lang('Su carrito está vacío'); ?></p>
                     </div>
                     <div class="form-actions">
                         <a href="<?php echo $lumise->cfg->url;?>" class="btn btn-large btn-primary">
-	                        <?php echo $lumise->lang('Continue Shopping'); ?>
+	                        <?php echo $lumise->lang('Continuar comprando'); ?>
 	                    </a>
                     </div>
                 <?php endif;?>
