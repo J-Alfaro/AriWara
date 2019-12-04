@@ -39,24 +39,24 @@ $lumise->do_action('editor-header');
 					<div id="lumise-no-product">
 						<?php
 							if (!isset($_GET['product'])) {
-								echo '<p>'.$lumise->lang('Please select a product to start designing').'</p>';
+								echo '<p>'.$lumise->lang('Por favor seleccione un producto para comenzar a diseñar').'</p>';
 							}else if (isset($_GET['product']) && $lumise->cfg->product === null) {
-								echo '<p>'.$lumise->lang('Sorry, the product you selected is not available!').'</p>';
+								echo '<p>'.$lumise->lang('Lo sentimos, el producto que seleccionaste no está disponible.').'</p>';
 							}
 						?>
 						<button class="lumise-btn" id="lumise-select-product">
-							<i class="lumisex-android-apps"></i> <?php echo $lumise->lang('Select product'); ?>
+							<i class="lumisex-android-apps"></i> <?php echo $lumise->lang('Seleccionar producto'); ?>
 						</button>
 					</div>
 				</div>
 				<div id="nav-bottom-left">
-					<div data-nav="colors" id="lumise-count-colors" title="<?php echo $lumise->lang('Count colors'); ?>">
+					<div data-nav="colors" id="lumise-count-colors" title="<?php echo $lumise->lang('Cuenta colores'); ?>">
 						<i>0+</i>
 					</div>
 				</div>
 				<div id="lumise-zoom-wrp">
 					<i class="lumisex-android-remove" data-zoom="out"></i>
-					<span><?php echo $lumise->lang('Scroll to zoom'); ?></span>
+					<span><?php echo $lumise->lang('Desplazarse para hacer zoom'); ?></span>
 					<inp data-range="helper" data-value="100%">
 						<input type="range" id="lumise-zoom" data-value="100%" min="100" max="250" value="100" />
 					</inp>
@@ -122,7 +122,7 @@ $lumise->do_action('editor-header');
 				lumise.attributes_cfg = <?php echo json_encode($lumise->cfg->product_attributes); ?>;
 			} catch (ex) {
 				lumise.attributes_cfg = {};
-				alert("<?php echo $lumise->lang('Error: configure the attributes of product'); ?>\n\n"+ex.message);
+				alert("<?php echo $lumise->lang('Error: configurar los atributos del producto'); ?>\n\n"+ex.message);
 			}
 			
 			var real_uri = window.location.href.split('?'),
