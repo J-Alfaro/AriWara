@@ -24,24 +24,46 @@ $data = $lumise->lib->get_rows('products', $search_filter, $orderby, $ordering, 
 include(theme('header.php'));
 
 ?>
-        <div class="lumise-hero">            
-            <div class="owl-carousel owl-theme">
-                <div class="item" style="background:url('<?php echo theme('assets/images/hero2.jpg', true); ?>') no-repeat;background-size:cover;">
-                    <div class="container">
-                        <h1><?php echo $lumise->lang('Nueva Colección 2019'); ?></h1>
-                        <h4><?php echo $lumise->lang('Venta de hasta el 50% de todos los productos de la nueva colección'); ?></h4>
-                        <a href="<?php echo $lumise->cfg->url.'products.php'; ?>"><?php echo $lumise->lang('Ver Colección'); ?></a>
-                    </div>
-                </div>
-                <div class="item" style="background:url('<?php echo theme('assets/images/hero1.jpg', true); ?>')no-repeat;background-size:cover;">
-                    <div class="container">
-                        <h1><?php echo $lumise->lang('Descuentos solo hoy!'); ?></h1>
-                        <h4><?php echo $lumise->lang('Aprovecha! 70% de descuentos para adquerir un producto personalizado'); ?></h4>
-                        <a href="<?php echo $lumise->cfg->url.'products.php'; ?>"><?php echo $lumise->lang('Ver Colección'); ?></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+ <!--Instanciando css y js para slider-->
+
+ <link rel="stylesheet" href="assets/slider-responsive/flexslider.css" type="text/css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+ <script src="assets/slider-responsive/js/jquery.flexslider.js"></script>
+ <script type="text/javascript" charset="utf-8">
+  $(window).load(function() {
+    $('.flexslider').flexslider({
+    	touch: true,
+    	pauseOnAction: false,
+    	pauseOnHover: false,
+    });
+  });
+</script>
+
+    <div class="flexslider">
+		<ul class="slides">
+			<li>
+				<img src="assets/slider-responsive/imagenes/1.jpg" alt="">
+				<section class="flex-caption">
+					
+				</section>
+			</li>
+			<li>
+				<img src="assets/slider-responsive/imagenes/2.jpg" alt="">
+				<section class="flex-caption">
+					
+				</section>
+			</li>
+			<li>
+				<img src="assets/slider-responsive/imagenes/3.jpg" alt="">
+				<section class="flex-caption">
+					
+				</section>
+			</li>
+		</ul>
+	</div>
+        
+  
+
         <div class="container">
             <div class="lumise-services">
                 <div class="row">
@@ -93,6 +115,7 @@ include(theme('header.php'));
         </div>
         <div class="lumise-client">
             <div class="container">
+            <h2 class="text-center"><b>COMPRAR POR MARCA</b></h2><br>
                 <div class="row">
                     <div class="col-md-2 col-sm-4">
                         <div class="client"><img src="<?php echo theme('assets/images/logo1.jpg', true); ?>" alt=""></div>
