@@ -333,6 +333,7 @@ class lumise_router {
 				'link'   => $this->getURI().'lumise-page=settings',
 				'capability' => 'lumise_read_settings'
 			),*/
+			
 		));
 		
 		$this->_load_assets = $load_assets;
